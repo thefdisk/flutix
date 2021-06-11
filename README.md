@@ -8,7 +8,7 @@ Fitur :
 
 Screenshot Aplikasi :
 
-![Screenshot_flutix_20210612-020517](https://user-images.githubusercontent.com/69206586/121737633-4f520000-cb23-11eb-97dd-39427dde613d.png)
+<img src="https://user-images.githubusercontent.com/69206586/121737633-4f520000-cb23-11eb-97dd-39427dde613d.png" width="100" height="100">
 ![Screenshot_flutix_20210612-020620](https://user-images.githubusercontent.com/69206586/121737658-57aa3b00-cb23-11eb-9d43-176f179a4f63.png)
 ![Screenshot_flutix_20210612-020634](https://user-images.githubusercontent.com/69206586/121737686-60027600-cb23-11eb-8626-cf05503dace6.png)
 ![Screenshot_flutix_20210612-020643](https://user-images.githubusercontent.com/69206586/121737692-62fd6680-cb23-11eb-8ee4-0a14cad5ba37.png)
