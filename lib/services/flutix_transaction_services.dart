@@ -1,5 +1,5 @@
 part of 'services.dart';
-
+/*
 class FlutixTransactionServices {
   static CollectionReference transactionCollection =
       FirebaseFirestore.instance.collection('transactions');
@@ -34,3 +34,4 @@ class FlutixTransactionServices {
         .toList();
   }
 }
+*/

@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class AccountConfirmationPage extends StatefulWidget {
   final RegistrationData registrationData;
 
@@ -151,3 +151,4 @@ class _AccountConfirmationPageState extends State<AccountConfirmationPage> {
     );
   }
 }
+*/

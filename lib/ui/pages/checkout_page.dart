@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class CheckoutPage extends StatefulWidget {
   final Ticket ticket;
 
@@ -453,3 +453,4 @@ class _CheckoutPageState extends State<CheckoutPage> {
     );
   }
 }
+*/

@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class Credit extends Equatable {
   final String name;
   final String profilePath;
@@ -9,3 +9,4 @@ class Credit extends Equatable {
   @override
   List<Object> get props => [name, profilePath];
 }
+*/

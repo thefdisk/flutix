@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class MovieCard extends StatelessWidget {
   final Movie movie;
   final Function onTap;
@@ -60,3 +60,4 @@ class MovieCard extends StatelessWidget {
     );
   }
 }
+*/

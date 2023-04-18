@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class MovieDetail extends Movie {
   final List<String> genres;
   final String language;
@@ -27,3 +27,4 @@ class MovieDetail extends Movie {
   @override
   List<Object> get props => super.props + [genres, language];
 }
+*/

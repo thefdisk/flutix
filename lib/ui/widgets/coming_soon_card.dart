@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class ComingSoonCard extends StatelessWidget {
   final Movie movie;
   final Function onTap;
@@ -21,3 +21,4 @@ class ComingSoonCard extends StatelessWidget {
     );
   }
 }
+*/

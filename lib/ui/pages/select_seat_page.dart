@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class SelectSeatPage extends StatefulWidget {
   final Ticket ticket;
 
@@ -187,3 +187,4 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
     );
   }
 }
+*/

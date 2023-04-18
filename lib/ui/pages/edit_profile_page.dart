@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class EditProfilePage extends StatefulWidget {
   final User user;
 
@@ -320,3 +320,4 @@ class _EditProfilePageState extends State<EditProfilePage> {
     );
   }
 }
+*/

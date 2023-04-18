@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class WalletPage extends StatelessWidget {
   final PageEvent pageEvent;
 
@@ -329,3 +329,4 @@ class CardReflectionClipper extends CustomClipper<Path> {
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }
+*/

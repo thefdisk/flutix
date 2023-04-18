@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class MoviePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -256,3 +256,4 @@ class MoviePage extends StatelessWidget {
     );
   }
 }
+*/

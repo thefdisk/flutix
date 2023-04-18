@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class MainPage extends StatefulWidget {
   final int bottomNavBarIndex;
   final bool isExpired;
@@ -153,3 +153,4 @@ class BottomNavBarClipper extends CustomClipper<Path> {
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }
+*/

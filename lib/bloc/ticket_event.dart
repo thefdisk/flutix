@@ -1,27 +1,27 @@
-part of 'ticket_bloc.dart';
+// part of 'ticket_bloc.dart';
 
-abstract class TicketEvent extends Equatable {
-  const TicketEvent();
+// abstract class TicketEvent extends Equatable {
+//   const TicketEvent();
 
-  @override
-  List<Object> get props => [];
-}
+//   @override
+//   List<Object> get props => [];
+// }
 
-class GetTickets extends TicketEvent {
-  final String userID;
+// class GetTickets extends TicketEvent {
+//   final String userID;
 
-  GetTickets(this.userID);
+//   GetTickets(this.userID);
 
-  @override
-  List<Object> get props => [userID];
-}
+//   @override
+//   List<Object> get props => [userID];
+// }
 
-class BuyTicket extends TicketEvent {
-  final Ticket ticket;
-  final String userID;
+// class BuyTicket extends TicketEvent {
+//   final Ticket ticket;
+//   final String userID;
 
-  BuyTicket(this.ticket, this.userID);
+//   BuyTicket(this.ticket, this.userID);
 
-  @override
-  List<Object> get props => [ticket, userID];
-}
+//   @override
+//   List<Object> get props => [ticket, userID];
+// }

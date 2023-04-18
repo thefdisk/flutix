@@ -1,5 +1,5 @@
 part of 'extensions.dart';
-
+/*
 extension FirebaseUserExtension on auth.User {
   User convertToUser({
     String name = 'No Name',
@@ -18,3 +18,4 @@ extension FirebaseUserExtension on auth.User {
 
   Future<User> fromFirestore() async => await UserServices.getUser(this.uid);
 }
+*/

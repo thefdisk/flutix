@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class SuccessPage extends StatelessWidget {
   final Ticket ticket;
   final FlutixTransaction transaction;
@@ -131,3 +131,4 @@ class SuccessPage extends StatelessWidget {
     await FlutixTransactionServices.saveTransaction(transaction);
   }
 }
+*/

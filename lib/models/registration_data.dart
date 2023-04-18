@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class RegistrationData {
   String name;
   String email;
@@ -17,3 +17,4 @@ class RegistrationData {
     this.profileImage,
   });
 }
+*/

@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class FlutixTransaction extends Equatable {
   final String userID;
   final String title;
@@ -20,3 +20,4 @@ class FlutixTransaction extends Equatable {
   @override
   List<Object> get props => [userID, title, subtitle, amount, time, picture];
 }
+*/

@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class SelectSchedulePage extends StatefulWidget {
   final MovieDetail movieDetail;
 
@@ -207,3 +207,4 @@ class _SelectSchedulePageState extends State<SelectSchedulePage> {
     );
   }
 }
+*/

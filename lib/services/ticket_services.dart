@@ -1,5 +1,5 @@
 part of 'services.dart';
-
+/*
 class TicketServices {
   static CollectionReference ticketCollection =
       FirebaseFirestore.instance.collection('tickets');
@@ -43,3 +43,4 @@ class TicketServices {
     return tickets;
   }
 }
+*/

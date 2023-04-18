@@ -1,144 +1,144 @@
-part of 'page_bloc.dart';
+// part of 'page_bloc.dart';
 
-abstract class PageState extends Equatable {
-  const PageState();
-}
+// abstract class PageState extends Equatable {
+//   const PageState();
+// }
 
-class OnInitialPage extends PageState {
-  @override
-  List<Object> get props => [];
-}
+// class OnInitialPage extends PageState {
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnLoginPage extends PageState {
-  @override
-  List<Object> get props => [];
-}
+// class OnLoginPage extends PageState {
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnSplashPage extends PageState {
-  @override
-  List<Object> get props => [];
-}
+// class OnSplashPage extends PageState {
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnMainPage extends PageState {
-  final int bottomNavBarIndex;
-  final bool isExpired;
+// class OnMainPage extends PageState {
+//   final int bottomNavBarIndex;
+//   final bool isExpired;
 
-  OnMainPage({this.bottomNavBarIndex = 0, this.isExpired = false});
+//   OnMainPage({this.bottomNavBarIndex = 0, this.isExpired = false});
 
-  @override
-  List<Object> get props => [bottomNavBarIndex, isExpired];
-}
+//   @override
+//   List<Object> get props => [bottomNavBarIndex, isExpired];
+// }
 
-class OnRegistrationPage extends PageState {
-  final RegistrationData registrationData;
+// class OnRegistrationPage extends PageState {
+//   final RegistrationData registrationData;
 
-  OnRegistrationPage(this.registrationData);
+//   OnRegistrationPage(this.registrationData);
 
-  @override
-  List<Object> get props => [];
-}
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnPreferencePage extends PageState {
-  final RegistrationData registrationData;
+// class OnPreferencePage extends PageState {
+//   final RegistrationData registrationData;
 
-  OnPreferencePage(this.registrationData);
+//   OnPreferencePage(this.registrationData);
 
-  @override
-  List<Object> get props => [];
-}
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnAccountConfirmationPage extends PageState {
-  final RegistrationData registrationData;
+// class OnAccountConfirmationPage extends PageState {
+//   final RegistrationData registrationData;
 
-  OnAccountConfirmationPage(this.registrationData);
+//   OnAccountConfirmationPage(this.registrationData);
 
-  @override
-  List<Object> get props => [];
-}
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnMovieDetailPage extends PageState {
-  final Movie movie;
+// class OnMovieDetailPage extends PageState {
+//   final Movie movie;
 
-  OnMovieDetailPage(this.movie);
+//   OnMovieDetailPage(this.movie);
 
-  @override
-  List<Object> get props => [movie];
-}
+//   @override
+//   List<Object> get props => [movie];
+// }
 
-class OnSelectSchedulePage extends PageState {
-  final MovieDetail movieDetail;
+// class OnSelectSchedulePage extends PageState {
+//   final MovieDetail movieDetail;
 
-  OnSelectSchedulePage(this.movieDetail);
+//   OnSelectSchedulePage(this.movieDetail);
 
-  @override
-  List<Object> get props => [movieDetail];
-}
+//   @override
+//   List<Object> get props => [movieDetail];
+// }
 
-class OnSelectSeatPage extends PageState {
-  final Ticket ticket;
+// class OnSelectSeatPage extends PageState {
+//   final Ticket ticket;
 
-  OnSelectSeatPage(this.ticket);
+//   OnSelectSeatPage(this.ticket);
 
-  @override
-  List<Object> get props => [ticket];
-}
+//   @override
+//   List<Object> get props => [ticket];
+// }
 
-class OnCheckoutPage extends PageState {
-  final Ticket ticket;
+// class OnCheckoutPage extends PageState {
+//   final Ticket ticket;
 
-  OnCheckoutPage(this.ticket);
+//   OnCheckoutPage(this.ticket);
 
-  @override
-  List<Object> get props => [ticket];
-}
+//   @override
+//   List<Object> get props => [ticket];
+// }
 
-class OnSuccessPage extends PageState {
-  final Ticket ticket;
-  final FlutixTransaction transaction;
+// class OnSuccessPage extends PageState {
+//   final Ticket ticket;
+//   final FlutixTransaction transaction;
 
-  OnSuccessPage(this.ticket, this.transaction);
+//   OnSuccessPage(this.ticket, this.transaction);
 
-  @override
-  List<Object> get props => [ticket, transaction];
-}
+//   @override
+//   List<Object> get props => [ticket, transaction];
+// }
 
-class OnDetailTicketPage extends PageState {
-  final Ticket ticket;
+// class OnDetailTicketPage extends PageState {
+//   final Ticket ticket;
 
-  OnDetailTicketPage(this.ticket);
+//   OnDetailTicketPage(this.ticket);
 
-  @override
-  List<Object> get props => [ticket];
-}
+//   @override
+//   List<Object> get props => [ticket];
+// }
 
-class OnProfilePage extends PageState {
-  @override
-  List<Object> get props => [];
-}
+// class OnProfilePage extends PageState {
+//   @override
+//   List<Object> get props => [];
+// }
 
-class OnTopUpPage extends PageState {
-  final PageEvent pageEvent;
+// class OnTopUpPage extends PageState {
+//   final PageEvent pageEvent;
 
-  OnTopUpPage(this.pageEvent);
+//   OnTopUpPage(this.pageEvent);
 
-  @override
-  List<Object> get props => [pageEvent];
-}
+//   @override
+//   List<Object> get props => [pageEvent];
+// }
 
-class OnWalletPage extends PageState {
-  final PageEvent pageEvent;
+// class OnWalletPage extends PageState {
+//   final PageEvent pageEvent;
 
-  OnWalletPage(this.pageEvent);
+//   OnWalletPage(this.pageEvent);
 
-  @override
-  List<Object> get props => [pageEvent];
-}
+//   @override
+//   List<Object> get props => [pageEvent];
+// }
 
-class OnEditProfilePage extends PageState {
-  final User user;
+// class OnEditProfilePage extends PageState {
+//   final User user;
 
-  OnEditProfilePage(this.user);
+//   OnEditProfilePage(this.user);
 
-  @override
-  List<Object> get props => [user];
-}
+//   @override
+//   List<Object> get props => [user];
+// }

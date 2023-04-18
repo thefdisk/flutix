@@ -3,18 +3,18 @@ part of 'widgets.dart';
 class BrowseButton extends StatelessWidget {
   final String genre;
 
-  BrowseButton(this.genre);
+  const BrowseButton(this.genre, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(bottom: 4),
+          margin: const EdgeInsets.only(bottom: 4),
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: Color(0xFFEEF1F8),
+            color: const Color(0xFFEEF1F8),
             borderRadius: BorderRadius.circular(8),
           ),
           child: SizedBox(
@@ -24,7 +24,7 @@ class BrowseButton extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 4,
         ),
         Text(
@@ -39,22 +39,16 @@ class BrowseButton extends StatelessWidget {
     switch (genre) {
       case 'Horror':
         return 'assets/ic_horror.png';
-        break;
       case 'Music':
         return 'assets/ic_music.png';
-        break;
       case 'Action':
         return 'assets/ic_action.png';
-        break;
       case 'Drama':
         return 'assets/ic_drama.png';
-        break;
       case 'War':
         return 'assets/ic_war.png';
-        break;
       case 'Crime':
         return 'assets/ic_crime.png';
-        break;
       default:
         return '';
     }

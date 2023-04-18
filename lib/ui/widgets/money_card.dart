@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class MoneyCard extends StatelessWidget {
   final double width;
   final bool isSelected;
@@ -63,3 +63,4 @@ class MoneyCard extends StatelessWidget {
     );
   }
 }
+*/

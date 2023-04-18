@@ -9,11 +9,11 @@ class MovieInitial extends MovieState {
   List<Object> get props => [];
 }
 
-class MovieLoaded extends MovieState {
-  final List<Movie> movies;
+// class MovieLoaded extends MovieState {
+//   final List<Movie> movies;
 
-  MovieLoaded({this.movies});
+//   MovieLoaded({this.movies});
 
-  @override
-  List<Object> get props => [movies];
-}
+//   @override
+//   List<Object> get props => [movies];
+// }

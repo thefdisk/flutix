@@ -1,5 +1,5 @@
 part of 'services.dart';
-
+/*
 class AuthServices {
   static auth.FirebaseAuth _auth = auth.FirebaseAuth.instance;
 
@@ -60,3 +60,4 @@ class SignInSignUpResult {
 
   SignInSignUpResult({this.user, this.message});
 }
+*/

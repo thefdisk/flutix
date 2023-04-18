@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class User extends Equatable {
   final String id;
   final String email;
@@ -37,3 +37,4 @@ class User extends Equatable {
         balance
       ];
 }
+*/

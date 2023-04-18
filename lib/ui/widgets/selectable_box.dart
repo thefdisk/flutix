@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class SelectableBox extends StatelessWidget {
   final bool isSelected;
   final bool isEnabled;
@@ -58,3 +58,4 @@ class SelectableBox extends StatelessWidget {
     );
   }
 }
+*/

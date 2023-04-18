@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class Movie extends Equatable {
   final int id;
   final String title;
@@ -36,3 +36,4 @@ class Movie extends Equatable {
         backdropPath,
       ];
 }
+*/

@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class RatingStars extends StatelessWidget {
   final double voteAverage;
   final double starSize;
@@ -48,3 +48,4 @@ class RatingStars extends StatelessWidget {
     );
   }
 }
+*/

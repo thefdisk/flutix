@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class Ticket extends Equatable {
   final MovieDetail movieDetail;
   final Theater theater;
@@ -60,3 +60,4 @@ class Ticket extends Equatable {
         totalPrice,
       ];
 }
+*/

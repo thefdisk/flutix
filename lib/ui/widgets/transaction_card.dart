@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class TransactionCard extends StatelessWidget {
   final FlutixTransaction transaction;
   final double width;
@@ -76,3 +76,4 @@ class TransactionCard extends StatelessWidget {
     );
   }
 }
+*/

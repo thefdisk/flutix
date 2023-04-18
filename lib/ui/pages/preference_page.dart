@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class PreferencePage extends StatefulWidget {
   final List<String> genres = [
     'Horror',
@@ -180,3 +180,4 @@ class _PreferencePageState extends State<PreferencePage> {
     }
   }
 }
+*/

@@ -1,5 +1,5 @@
 part of 'widgets.dart';
-
+/*
 class PromoCard extends StatelessWidget {
   final Promo promo;
 
@@ -128,3 +128,4 @@ class PromoCard extends StatelessWidget {
     );
   }
 }
+*/

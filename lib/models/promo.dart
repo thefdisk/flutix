@@ -1,5 +1,5 @@
 part of 'models.dart';
-
+/*
 class Promo extends Equatable {
   final String title;
   final String subtitle;
@@ -32,3 +32,4 @@ List<Promo> dummyPromo = [
     discount: 40,
   ),
 ];
+*/

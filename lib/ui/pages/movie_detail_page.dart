@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class MovieDetailPage extends StatelessWidget {
   final Movie movie;
 
@@ -227,3 +227,4 @@ class MovieDetailPage extends StatelessWidget {
     );
   }
 }
+*/

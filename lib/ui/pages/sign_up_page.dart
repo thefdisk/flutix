@@ -1,5 +1,5 @@
 part of 'pages.dart';
-
+/*
 class SignUpPage extends StatefulWidget {
   final RegistrationData registrationData;
 
@@ -239,3 +239,4 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 }
+*/

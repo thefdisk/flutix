@@ -1,5 +1,5 @@
 part of 'services.dart';
-
+/*
 class MovieServices {
   static Future<List<Movie>> getMovies(int page, {http.Client client}) async {
     String url =
@@ -78,3 +78,4 @@ class MovieServices {
         .toList();
   }
 }
+*/
