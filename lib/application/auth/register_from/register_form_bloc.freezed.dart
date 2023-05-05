@@ -18,58 +18,70 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$RegisterFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileChanged,
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileChanged,
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileChanged,
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_PhotoProfileChanged value) photoProfileChanged,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_EmailChanged value) emailChanged,
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -94,20 +106,20 @@ class _$RegisterFormEventCopyWithImpl<$Res, $Val extends RegisterFormEvent>
 }
 
 /// @nodoc
-abstract class _$$_PhotoProfileChangedCopyWith<$Res> {
-  factory _$$_PhotoProfileChangedCopyWith(_$_PhotoProfileChanged value,
-          $Res Function(_$_PhotoProfileChanged) then) =
-      __$$_PhotoProfileChangedCopyWithImpl<$Res>;
+abstract class _$$_PhotoProfileAddedCopyWith<$Res> {
+  factory _$$_PhotoProfileAddedCopyWith(_$_PhotoProfileAdded value,
+          $Res Function(_$_PhotoProfileAdded) then) =
+      __$$_PhotoProfileAddedCopyWithImpl<$Res>;
   @useResult
   $Res call({File photoProfile});
 }
 
 /// @nodoc
-class __$$_PhotoProfileChangedCopyWithImpl<$Res>
-    extends _$RegisterFormEventCopyWithImpl<$Res, _$_PhotoProfileChanged>
-    implements _$$_PhotoProfileChangedCopyWith<$Res> {
-  __$$_PhotoProfileChangedCopyWithImpl(_$_PhotoProfileChanged _value,
-      $Res Function(_$_PhotoProfileChanged) _then)
+class __$$_PhotoProfileAddedCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_PhotoProfileAdded>
+    implements _$$_PhotoProfileAddedCopyWith<$Res> {
+  __$$_PhotoProfileAddedCopyWithImpl(
+      _$_PhotoProfileAdded _value, $Res Function(_$_PhotoProfileAdded) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +127,7 @@ class __$$_PhotoProfileChangedCopyWithImpl<$Res>
   $Res call({
     Object? photoProfile = null,
   }) {
-    return _then(_$_PhotoProfileChanged(
+    return _then(_$_PhotoProfileAdded(
       null == photoProfile
           ? _value.photoProfile
           : photoProfile // ignore: cast_nullable_to_non_nullable
@@ -126,22 +138,22 @@ class __$$_PhotoProfileChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PhotoProfileChanged implements _PhotoProfileChanged {
-  const _$_PhotoProfileChanged(this.photoProfile);
+class _$_PhotoProfileAdded implements _PhotoProfileAdded {
+  const _$_PhotoProfileAdded(this.photoProfile);
 
   @override
   final File photoProfile;
 
   @override
   String toString() {
-    return 'RegisterFormEvent.photoProfileChanged(photoProfile: $photoProfile)';
+    return 'RegisterFormEvent.photoProfileAdded(photoProfile: $photoProfile)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PhotoProfileChanged &&
+            other is _$_PhotoProfileAdded &&
             (identical(other.photoProfile, photoProfile) ||
                 other.photoProfile == photoProfile));
   }
@@ -152,46 +164,52 @@ class _$_PhotoProfileChanged implements _PhotoProfileChanged {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PhotoProfileChangedCopyWith<_$_PhotoProfileChanged> get copyWith =>
-      __$$_PhotoProfileChangedCopyWithImpl<_$_PhotoProfileChanged>(
+  _$$_PhotoProfileAddedCopyWith<_$_PhotoProfileAdded> get copyWith =>
+      __$$_PhotoProfileAddedCopyWithImpl<_$_PhotoProfileAdded>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileChanged,
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
   }) {
-    return photoProfileChanged(photoProfile);
+    return photoProfileAdded(photoProfile);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileChanged,
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
   }) {
-    return photoProfileChanged?.call(photoProfile);
+    return photoProfileAdded?.call(photoProfile);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileChanged,
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
     required TResult orElse(),
   }) {
-    if (photoProfileChanged != null) {
-      return photoProfileChanged(photoProfile);
+    if (photoProfileAdded != null) {
+      return photoProfileAdded(photoProfile);
     }
     return orElse();
   }
@@ -199,53 +217,192 @@ class _$_PhotoProfileChanged implements _PhotoProfileChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_PhotoProfileChanged value) photoProfileChanged,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_EmailChanged value) emailChanged,
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
   }) {
-    return photoProfileChanged(this);
+    return photoProfileAdded(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
   }) {
-    return photoProfileChanged?.call(this);
+    return photoProfileAdded?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
     required TResult orElse(),
   }) {
-    if (photoProfileChanged != null) {
-      return photoProfileChanged(this);
+    if (photoProfileAdded != null) {
+      return photoProfileAdded(this);
     }
     return orElse();
   }
 }
 
-abstract class _PhotoProfileChanged implements RegisterFormEvent {
-  const factory _PhotoProfileChanged(final File photoProfile) =
-      _$_PhotoProfileChanged;
+abstract class _PhotoProfileAdded implements RegisterFormEvent {
+  const factory _PhotoProfileAdded(final File photoProfile) =
+      _$_PhotoProfileAdded;
 
   File get photoProfile;
   @JsonKey(ignore: true)
-  _$$_PhotoProfileChangedCopyWith<_$_PhotoProfileChanged> get copyWith =>
+  _$$_PhotoProfileAddedCopyWith<_$_PhotoProfileAdded> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_PhotoProfileDeletedCopyWith<$Res> {
+  factory _$$_PhotoProfileDeletedCopyWith(_$_PhotoProfileDeleted value,
+          $Res Function(_$_PhotoProfileDeleted) then) =
+      __$$_PhotoProfileDeletedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_PhotoProfileDeletedCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_PhotoProfileDeleted>
+    implements _$$_PhotoProfileDeletedCopyWith<$Res> {
+  __$$_PhotoProfileDeletedCopyWithImpl(_$_PhotoProfileDeleted _value,
+      $Res Function(_$_PhotoProfileDeleted) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
+  const _$_PhotoProfileDeleted();
+
+  @override
+  String toString() {
+    return 'RegisterFormEvent.photoProfileDeleted()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_PhotoProfileDeleted);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
+    required TResult Function(String fullname) fullNameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
+  }) {
+    return photoProfileDeleted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
+    TResult? Function(String fullname)? fullNameChanged,
+    TResult? Function(String email)? emailChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
+  }) {
+    return photoProfileDeleted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
+    TResult Function(String fullname)? fullNameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
+    required TResult orElse(),
+  }) {
+    if (photoProfileDeleted != null) {
+      return photoProfileDeleted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ConfirmPasswordChanged value)
+        confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
+  }) {
+    return photoProfileDeleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_EmailChanged value)? emailChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
+  }) {
+    return photoProfileDeleted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
+    required TResult orElse(),
+  }) {
+    if (photoProfileDeleted != null) {
+      return photoProfileDeleted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PhotoProfileDeleted implements RegisterFormEvent {
+  const factory _PhotoProfileDeleted() = _$_PhotoProfileDeleted;
 }
 
 /// @nodoc
@@ -313,11 +470,13 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileChanged,
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
   }) {
     return fullNameChanged(fullname);
   }
@@ -325,11 +484,13 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileChanged,
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
   }) {
     return fullNameChanged?.call(fullname);
   }
@@ -337,11 +498,13 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileChanged,
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -353,12 +516,14 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_PhotoProfileChanged value) photoProfileChanged,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_EmailChanged value) emailChanged,
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
   }) {
     return fullNameChanged(this);
   }
@@ -366,11 +531,13 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
   }) {
     return fullNameChanged?.call(this);
   }
@@ -378,11 +545,13 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -465,11 +634,13 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileChanged,
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
   }) {
     return emailChanged(email);
   }
@@ -477,11 +648,13 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileChanged,
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
   }) {
     return emailChanged?.call(email);
   }
@@ -489,11 +662,13 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileChanged,
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -505,12 +680,14 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_PhotoProfileChanged value) photoProfileChanged,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_EmailChanged value) emailChanged,
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
   }) {
     return emailChanged(this);
   }
@@ -518,11 +695,13 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
   }) {
     return emailChanged?.call(this);
   }
@@ -530,11 +709,13 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -618,11 +799,13 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileChanged,
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
   }) {
     return passwordChanged(password);
   }
@@ -630,11 +813,13 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileChanged,
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
   }) {
     return passwordChanged?.call(password);
   }
@@ -642,11 +827,13 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileChanged,
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -658,12 +845,14 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_PhotoProfileChanged value) photoProfileChanged,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_EmailChanged value) emailChanged,
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
   }) {
     return passwordChanged(this);
   }
@@ -671,11 +860,13 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
   }) {
     return passwordChanged?.call(this);
   }
@@ -683,11 +874,13 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -772,11 +965,13 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileChanged,
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
   }) {
     return confirmPasswordChanged(confirmPassword);
   }
@@ -784,11 +979,13 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileChanged,
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
   }) {
     return confirmPasswordChanged?.call(confirmPassword);
   }
@@ -796,11 +993,13 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileChanged,
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
     required TResult orElse(),
   }) {
     if (confirmPasswordChanged != null) {
@@ -812,12 +1011,14 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_PhotoProfileChanged value) photoProfileChanged,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_EmailChanged value) emailChanged,
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
   }) {
     return confirmPasswordChanged(this);
   }
@@ -825,11 +1026,13 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
   }) {
     return confirmPasswordChanged?.call(this);
   }
@@ -837,11 +1040,13 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_PhotoProfileChanged value)? photoProfileChanged,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
     required TResult orElse(),
   }) {
     if (confirmPasswordChanged != null) {
@@ -862,11 +1067,146 @@ abstract class _ConfirmPasswordChanged implements RegisterFormEvent {
 }
 
 /// @nodoc
+abstract class _$$_ValidateFieldCopyWith<$Res> {
+  factory _$$_ValidateFieldCopyWith(
+          _$_ValidateField value, $Res Function(_$_ValidateField) then) =
+      __$$_ValidateFieldCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_ValidateFieldCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_ValidateField>
+    implements _$$_ValidateFieldCopyWith<$Res> {
+  __$$_ValidateFieldCopyWithImpl(
+      _$_ValidateField _value, $Res Function(_$_ValidateField) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_ValidateField implements _ValidateField {
+  const _$_ValidateField();
+
+  @override
+  String toString() {
+    return 'RegisterFormEvent.validateField()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_ValidateField);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
+    required TResult Function(String fullname) fullNameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() validateField,
+  }) {
+    return validateField();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
+    TResult? Function(String fullname)? fullNameChanged,
+    TResult? Function(String email)? emailChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? validateField,
+  }) {
+    return validateField?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
+    TResult Function(String fullname)? fullNameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? validateField,
+    required TResult orElse(),
+  }) {
+    if (validateField != null) {
+      return validateField();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ConfirmPasswordChanged value)
+        confirmPasswordChanged,
+    required TResult Function(_ValidateField value) validateField,
+  }) {
+    return validateField(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_EmailChanged value)? emailChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_ValidateField value)? validateField,
+  }) {
+    return validateField?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_ValidateField value)? validateField,
+    required TResult orElse(),
+  }) {
+    if (validateField != null) {
+      return validateField(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ValidateField implements RegisterFormEvent {
+  const factory _ValidateField() = _$_ValidateField;
+}
+
+/// @nodoc
 mixin _$RegisterFormState {
+  Register get register => throw _privateConstructorUsedError;
   User get user => throw _privateConstructorUsedError;
-  File? get photoProfile => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, Unit>> get failureOrSuccessOption =>
       throw _privateConstructorUsedError;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get isFormfieldValid => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -881,11 +1221,14 @@ abstract class $RegisterFormStateCopyWith<$Res> {
       _$RegisterFormStateCopyWithImpl<$Res, RegisterFormState>;
   @useResult
   $Res call(
-      {User user,
-      File? photoProfile,
+      {Register register,
+      User user,
       Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+      bool showErrorMessages,
+      bool isFormfieldValid,
       bool isSubmitting});
 
+  $RegisterCopyWith<$Res> get register;
   $UserCopyWith<$Res> get user;
 }
 
@@ -902,29 +1245,47 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? register = null,
     Object? user = null,
-    Object? photoProfile = freezed,
     Object? failureOrSuccessOption = null,
+    Object? showErrorMessages = null,
+    Object? isFormfieldValid = null,
     Object? isSubmitting = null,
   }) {
     return _then(_value.copyWith(
+      register: null == register
+          ? _value.register
+          : register // ignore: cast_nullable_to_non_nullable
+              as Register,
       user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      photoProfile: freezed == photoProfile
-          ? _value.photoProfile
-          : photoProfile // ignore: cast_nullable_to_non_nullable
-              as File?,
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
+      showErrorMessages: null == showErrorMessages
+          ? _value.showErrorMessages
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFormfieldValid: null == isFormfieldValid
+          ? _value.isFormfieldValid
+          : isFormfieldValid // ignore: cast_nullable_to_non_nullable
+              as bool,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RegisterCopyWith<$Res> get register {
+    return $RegisterCopyWith<$Res>(_value.register, (value) {
+      return _then(_value.copyWith(register: value) as $Val);
+    });
   }
 
   @override
@@ -945,11 +1306,15 @@ abstract class _$$_RegisterFormStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {User user,
-      File? photoProfile,
+      {Register register,
+      User user,
       Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+      bool showErrorMessages,
+      bool isFormfieldValid,
       bool isSubmitting});
 
+  @override
+  $RegisterCopyWith<$Res> get register;
   @override
   $UserCopyWith<$Res> get user;
 }
@@ -965,24 +1330,34 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? register = null,
     Object? user = null,
-    Object? photoProfile = freezed,
     Object? failureOrSuccessOption = null,
+    Object? showErrorMessages = null,
+    Object? isFormfieldValid = null,
     Object? isSubmitting = null,
   }) {
     return _then(_$_RegisterFormState(
+      register: null == register
+          ? _value.register
+          : register // ignore: cast_nullable_to_non_nullable
+              as Register,
       user: null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      photoProfile: freezed == photoProfile
-          ? _value.photoProfile
-          : photoProfile // ignore: cast_nullable_to_non_nullable
-              as File?,
       failureOrSuccessOption: null == failureOrSuccessOption
           ? _value.failureOrSuccessOption
           : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
+      showErrorMessages: null == showErrorMessages
+          ? _value.showErrorMessages
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFormfieldValid: null == isFormfieldValid
+          ? _value.isFormfieldValid
+          : isFormfieldValid // ignore: cast_nullable_to_non_nullable
+              as bool,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
@@ -993,26 +1368,35 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RegisterFormState implements _RegisterFormState {
+class _$_RegisterFormState extends _RegisterFormState {
   const _$_RegisterFormState(
-      {required this.user,
-      this.photoProfile,
+      {required this.register,
+      required this.user,
       required this.failureOrSuccessOption,
-      this.isSubmitting = false});
+      this.showErrorMessages = false,
+      this.isFormfieldValid = false,
+      this.isSubmitting = false})
+      : super._();
 
+  @override
+  final Register register;
   @override
   final User user;
   @override
-  final File? photoProfile;
-  @override
   final Option<Either<AuthFailure, Unit>> failureOrSuccessOption;
+  @override
+  @JsonKey()
+  final bool showErrorMessages;
+  @override
+  @JsonKey()
+  final bool isFormfieldValid;
   @override
   @JsonKey()
   final bool isSubmitting;
 
   @override
   String toString() {
-    return 'RegisterFormState(user: $user, photoProfile: $photoProfile, failureOrSuccessOption: $failureOrSuccessOption, isSubmitting: $isSubmitting)';
+    return 'RegisterFormState(register: $register, user: $user, failureOrSuccessOption: $failureOrSuccessOption, showErrorMessages: $showErrorMessages, isFormfieldValid: $isFormfieldValid, isSubmitting: $isSubmitting)';
   }
 
   @override
@@ -1020,18 +1404,28 @@ class _$_RegisterFormState implements _RegisterFormState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RegisterFormState &&
+            (identical(other.register, register) ||
+                other.register == register) &&
             (identical(other.user, user) || other.user == user) &&
-            (identical(other.photoProfile, photoProfile) ||
-                other.photoProfile == photoProfile) &&
             (identical(other.failureOrSuccessOption, failureOrSuccessOption) ||
                 other.failureOrSuccessOption == failureOrSuccessOption) &&
+            (identical(other.showErrorMessages, showErrorMessages) ||
+                other.showErrorMessages == showErrorMessages) &&
+            (identical(other.isFormfieldValid, isFormfieldValid) ||
+                other.isFormfieldValid == isFormfieldValid) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, user, photoProfile, failureOrSuccessOption, isSubmitting);
+      runtimeType,
+      register,
+      user,
+      failureOrSuccessOption,
+      showErrorMessages,
+      isFormfieldValid,
+      isSubmitting);
 
   @JsonKey(ignore: true)
   @override
@@ -1041,19 +1435,26 @@ class _$_RegisterFormState implements _RegisterFormState {
           this, _$identity);
 }
 
-abstract class _RegisterFormState implements RegisterFormState {
+abstract class _RegisterFormState extends RegisterFormState {
   const factory _RegisterFormState(
-      {required final User user,
-      final File? photoProfile,
+      {required final Register register,
+      required final User user,
       required final Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+      final bool showErrorMessages,
+      final bool isFormfieldValid,
       final bool isSubmitting}) = _$_RegisterFormState;
+  const _RegisterFormState._() : super._();
 
+  @override
+  Register get register;
   @override
   User get user;
   @override
-  File? get photoProfile;
-  @override
   Option<Either<AuthFailure, Unit>> get failureOrSuccessOption;
+  @override
+  bool get showErrorMessages;
+  @override
+  bool get isFormfieldValid;
   @override
   bool get isSubmitting;
   @override

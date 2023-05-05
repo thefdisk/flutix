@@ -2,8 +2,9 @@ part of 'register_form_bloc.dart';
 
 @freezed
 class RegisterFormEvent with _$RegisterFormEvent {
-  const factory RegisterFormEvent.photoProfileChanged(File photoProfile) =
-      _PhotoProfileChanged;
+  const factory RegisterFormEvent.photoProfileAdded(File photoProfile) =
+      _PhotoProfileAdded;
+  const factory RegisterFormEvent.photoProfileDeleted() = _PhotoProfileDeleted;
   const factory RegisterFormEvent.fullNameChanged(String fullname) =
       _FullNameChanged;
   const factory RegisterFormEvent.emailChanged(String email) = _EmailChanged;
@@ -11,4 +12,5 @@ class RegisterFormEvent with _$RegisterFormEvent {
       _PasswordChanged;
   const factory RegisterFormEvent.confirmPasswordChanged(
       String confirmPassword) = _ConfirmPasswordChanged;
+  const factory RegisterFormEvent.validateField() = _ValidateField;
 }

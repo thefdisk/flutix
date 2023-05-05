@@ -19,6 +19,9 @@ class ColorName {
   /// Color: #ADADAD
   static const Color accentColor3 = Color(0xFFADADAD);
 
+  /// Color: #3E9D9D
+  static const Color accentColor4 = Color(0xFF3E9D9D);
+
   /// Color: #2C1F63
   static const Color accentColor1 = Color(0xFF2C1F63);
 

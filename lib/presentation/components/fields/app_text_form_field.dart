@@ -9,17 +9,23 @@ class AppTextFormField extends StatelessWidget {
     this.labelText,
     this.controller,
     this.obscureText = false,
+    this.onChanged,
+    this.validator,
   });
 
   final String? labelText;
   final TextEditingController? controller;
   final bool obscureText;
+  final Function(String value)? onChanged;
+  final String? Function(String? value)? validator;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
+      onChanged: onChanged,
+      validator: validator,
       decoration: InputDecoration(
         labelText: labelText,
         labelStyle: AppTypography(context)
