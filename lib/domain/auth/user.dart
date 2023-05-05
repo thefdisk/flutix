@@ -11,6 +11,7 @@ class User with _$User {
     required String name,
     required String profilePicture,
     required List<String> selectedGenres,
+    required String selectedLanguage,
     required int balance,
   }) = _User;
 
@@ -20,6 +21,7 @@ class User with _$User {
         name: '',
         profilePicture: '',
         selectedGenres: [],
+        selectedLanguage: '',
         balance: 0,
       );
 }

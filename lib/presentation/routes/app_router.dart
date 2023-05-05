@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 
 import '../pages/register/pages/confirm_page.dart';
 import '../pages/register/pages/input_page.dart';
-import '../pages/register/pages/select_genre_and_lang_page.dart';
+import '../pages/register/pages/preference_page.dart';
 import '../pages/register/register_page.dart';
 import '../pages/splash/splash_page.dart';
 import '../pages/welcome/welcome_page.dart';
@@ -21,8 +20,8 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: RegisterRoute.page,
           children: [
-            AutoRoute(page: RegisterInputRoute.page),
-            AutoRoute(page: RegisterGenreAndLangRoute.page),
+            AutoRoute(page: RegisterInputRoute.page, initial: true),
+            AutoRoute(page: RegisterPreferenceRoute.page),
             AutoRoute(page: RegisterConfirmRoute.page),
           ],
         ),

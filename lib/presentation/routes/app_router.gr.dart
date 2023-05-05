@@ -10,7 +10,8 @@
 part of 'app_router.dart';
 
 abstract class _$AppRouter extends RootStackRouter {
-  _$AppRouter([GlobalKey<NavigatorState>? navigatorKey]) : super(navigatorKey);
+  // ignore: unused_element
+  _$AppRouter({super.navigatorKey});
 
   @override
   final Map<String, PageFactory> pagesMap = {
@@ -26,16 +27,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const RegisterInputPage(),
       );
     },
-    RegisterGenreAndLangRoute.name: (routeData) {
+    RegisterPreferenceRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const RegisterGenreAndLangPage(),
+        child: const RegisterPreferencePage(),
       );
     },
     RegisterRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const RegisterPage(),
+        child: WrappedRoute(child: const RegisterPage()),
       );
     },
     SplashRoute.name: (routeData) {
@@ -82,15 +83,15 @@ class RegisterInputRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [RegisterGenreAndLangPage]
-class RegisterGenreAndLangRoute extends PageRouteInfo<void> {
-  const RegisterGenreAndLangRoute({List<PageRouteInfo>? children})
+/// [RegisterPreferencePage]
+class RegisterPreferenceRoute extends PageRouteInfo<void> {
+  const RegisterPreferenceRoute({List<PageRouteInfo>? children})
       : super(
-          RegisterGenreAndLangRoute.name,
+          RegisterPreferenceRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'RegisterGenreAndLangRoute';
+  static const String name = 'RegisterPreferenceRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

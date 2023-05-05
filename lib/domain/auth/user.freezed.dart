@@ -21,6 +21,7 @@ mixin _$User {
   String get name => throw _privateConstructorUsedError;
   String get profilePicture => throw _privateConstructorUsedError;
   List<String> get selectedGenres => throw _privateConstructorUsedError;
+  String get selectedLanguage => throw _privateConstructorUsedError;
   int get balance => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -38,6 +39,7 @@ abstract class $UserCopyWith<$Res> {
       String name,
       String profilePicture,
       List<String> selectedGenres,
+      String selectedLanguage,
       int balance});
 }
 
@@ -59,6 +61,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? name = null,
     Object? profilePicture = null,
     Object? selectedGenres = null,
+    Object? selectedLanguage = null,
     Object? balance = null,
   }) {
     return _then(_value.copyWith(
@@ -82,6 +85,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.selectedGenres
           : selectedGenres // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedLanguage: null == selectedLanguage
+          ? _value.selectedLanguage
+          : selectedLanguage // ignore: cast_nullable_to_non_nullable
+              as String,
       balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
@@ -102,6 +109,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String name,
       String profilePicture,
       List<String> selectedGenres,
+      String selectedLanguage,
       int balance});
 }
 
@@ -119,6 +127,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     Object? name = null,
     Object? profilePicture = null,
     Object? selectedGenres = null,
+    Object? selectedLanguage = null,
     Object? balance = null,
   }) {
     return _then(_$_User(
@@ -142,6 +151,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
           ? _value._selectedGenres
           : selectedGenres // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedLanguage: null == selectedLanguage
+          ? _value.selectedLanguage
+          : selectedLanguage // ignore: cast_nullable_to_non_nullable
+              as String,
       balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
@@ -159,6 +172,7 @@ class _$_User extends _User {
       required this.name,
       required this.profilePicture,
       required final List<String> selectedGenres,
+      required this.selectedLanguage,
       required this.balance})
       : _selectedGenres = selectedGenres,
         super._();
@@ -180,11 +194,13 @@ class _$_User extends _User {
   }
 
   @override
+  final String selectedLanguage;
+  @override
   final int balance;
 
   @override
   String toString() {
-    return 'User(id: $id, email: $email, name: $name, profilePicture: $profilePicture, selectedGenres: $selectedGenres, balance: $balance)';
+    return 'User(id: $id, email: $email, name: $name, profilePicture: $profilePicture, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage, balance: $balance)';
   }
 
   @override
@@ -199,12 +215,21 @@ class _$_User extends _User {
                 other.profilePicture == profilePicture) &&
             const DeepCollectionEquality()
                 .equals(other._selectedGenres, _selectedGenres) &&
+            (identical(other.selectedLanguage, selectedLanguage) ||
+                other.selectedLanguage == selectedLanguage) &&
             (identical(other.balance, balance) || other.balance == balance));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, email, name, profilePicture,
-      const DeepCollectionEquality().hash(_selectedGenres), balance);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      email,
+      name,
+      profilePicture,
+      const DeepCollectionEquality().hash(_selectedGenres),
+      selectedLanguage,
+      balance);
 
   @JsonKey(ignore: true)
   @override
@@ -220,6 +245,7 @@ abstract class _User extends User {
       required final String name,
       required final String profilePicture,
       required final List<String> selectedGenres,
+      required final String selectedLanguage,
       required final int balance}) = _$_User;
   const _User._() : super._();
 
@@ -233,6 +259,8 @@ abstract class _User extends User {
   String get profilePicture;
   @override
   List<String> get selectedGenres;
+  @override
+  String get selectedLanguage;
   @override
   int get balance;
   @override

@@ -1,9 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:injectable/injectable.dart';
 
 import 'firebase_options.dart';
+import 'injection.dart';
 import 'presentation/app_widget.dart';
 
 void main() async {
@@ -18,6 +21,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  configureDependencies(kReleaseMode ? Environment.prod : Environment.dev);
 
   runApp(const AppWidget());
 }

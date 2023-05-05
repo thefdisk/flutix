@@ -8,10 +8,12 @@ class AppElevatedButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.child,
+    this.color,
   });
 
   final VoidCallback? onPressed;
   final Widget? child;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +22,13 @@ class AppElevatedButton extends StatelessWidget {
       style: ButtonStyle(
         overlayColor: MaterialStateProperty.resolveWith((states) {
           return states.contains(MaterialState.pressed)
-              ? ColorName.accentColor1
+              ? color ?? ColorName.accentColor1
               : null;
         }),
         backgroundColor: MaterialStateProperty.resolveWith((states) {
           return states.contains(MaterialState.disabled)
               ? ColorName.accentColor3
-              : ColorName.mainColor;
+              : color ?? ColorName.mainColor;
         }),
         fixedSize: MaterialStateProperty.all(
           const Size(double.maxFinite, 46),
