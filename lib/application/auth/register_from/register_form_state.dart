@@ -6,16 +6,16 @@ class RegisterFormState with _$RegisterFormState {
   const factory RegisterFormState({
     required Register register,
     required User user,
-    required Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+    required Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption,
     @Default(false) bool showErrorMessages,
-    @Default(false) bool isFormfieldValid,
+    @Default(false) bool isRegistering,
     @Default(false) bool isSubmitting,
   }) = _RegisterFormState;
 
   factory RegisterFormState.initial() => RegisterFormState(
         register: Register.empty(),
         user: User.empty(),
-        failureOrSuccessOption: none(),
+        failureOrSuccessRegisterOption: none(),
       );
 
   bool get isFormAllFilled =>

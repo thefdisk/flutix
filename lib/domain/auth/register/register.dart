@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../core/value_objects.dart';
+import '../user.dart';
 import '../value_objects.dart';
 
 part 'register.freezed.dart';
@@ -27,5 +28,15 @@ class Register with _$Register {
         confirmPassword: ConfirmPassword('', ''),
         selectedGenres: [],
         selectedLanguage: 'English',
+      );
+
+  User toUserDomain() => User(
+        id: '',
+        email: email.getOrCrash(),
+        name: name.getOrCrash(),
+        profilePicture: '',
+        selectedGenres: selectedGenres,
+        selectedLanguage: selectedLanguage,
+        balance: 0,
       );
 }

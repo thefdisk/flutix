@@ -12,6 +12,9 @@ abstract class IAuthRepository {
     required String email,
     required String password,
   });
+  Future<Either<AuthFailure, Unit>> updateUser({
+    required User user,
+  });
   Stream<User> getAuthState();
   Future<Either<AuthFailure, User>> getDetailUser();
 }
