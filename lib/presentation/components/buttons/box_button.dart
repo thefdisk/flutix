@@ -25,7 +25,7 @@ class BoxButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap?.call(),
+      onTap: () => onTap?.call(),
       child: Container(
         height: height,
         width: width,

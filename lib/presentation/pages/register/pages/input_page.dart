@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 
 import '../../../../application/auth/register_from/register_form_bloc.dart';
 import '../../../components/gen/colors.gen.dart';
 import '../../../components/styles/typography.dart';
+import '../../../components/toast/app_toast.dart';
 import '../widgets/photo_profile_field_widget.dart';
 import '../widgets/register_field.dart';
 
@@ -15,11 +17,24 @@ class RegisterInputPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<RegisterFormBloc, RegisterFormState>(
-      listenWhen: (p, c) => p.isFormfieldValid != c.isFormfieldValid,
+      listenWhen: (p, c) => p.isRegistering != c.isRegistering,
       listener: (context, state) {
-        if (state.isFormfieldValid) {
-          AutoTabsRouter.of(context).setActiveIndex(1);
+        if (state.isRegistering) {
+          context.loaderOverlay.show();
+        } else {
+          context.loaderOverlay.hide();
         }
+
+        state.failureOrSuccessRegisterOption.fold(
+          () {},
+          (either) => either.fold(
+            (f) => f.maybeMap(
+              orElse: () => AppToast(context).showAuthFailureToast(f),
+              emailAlreadyInUse: (_) => print('Email already in use'),
+            ),
+            (_) => context.tabsRouter.setActiveIndex(1),
+          ),
+        );
       },
       child: Scaffold(
         appBar: AppBar(
@@ -49,7 +64,7 @@ class RegisterInputPage extends StatelessWidget {
                   onPressed: state.isFormAllFilled
                       ? () => context
                           .read<RegisterFormBloc>()
-                          .add(const RegisterFormEvent.validateField())
+                          .add(const RegisterFormEvent.register())
                       : null,
                   elevation: 0,
                   backgroundColor: state.isFormAllFilled

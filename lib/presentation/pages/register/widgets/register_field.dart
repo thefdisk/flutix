@@ -37,6 +37,7 @@ class RegisterField extends StatelessWidget {
               const SizedBox(height: 16),
               AppTextFormField(
                 labelText: 'Email Address',
+                keyboardType: TextInputType.emailAddress,
                 onChanged: (value) => context
                     .read<RegisterFormBloc>()
                     .add(RegisterFormEvent.emailChanged(value)),

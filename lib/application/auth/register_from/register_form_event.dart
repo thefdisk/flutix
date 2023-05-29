@@ -12,5 +12,9 @@ class RegisterFormEvent with _$RegisterFormEvent {
       _PasswordChanged;
   const factory RegisterFormEvent.confirmPasswordChanged(
       String confirmPassword) = _ConfirmPasswordChanged;
-  const factory RegisterFormEvent.validateField() = _ValidateField;
+  const factory RegisterFormEvent.register() = _Register;
+  const factory RegisterFormEvent.genreChanged(String genre) = _GenreChanged;
+  const factory RegisterFormEvent.languageChanged(String language) =
+      _languageChanged;
+  const factory RegisterFormEvent.userUpdated() = _UserUpdated;
 }

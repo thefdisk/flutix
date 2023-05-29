@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -91,11 +90,12 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
           ),
         );
       },
-      validateField: (e) async {
+      register: (e) async {
         emit(
           state.copyWith(
             showErrorMessages: true,
-            isFormfieldValid: false,
+            isRegistering: true,
+            failureOrSuccessRegisterOption: none(),
           ),
         );
 
@@ -104,18 +104,78 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
         final isPasswordValid = state.register.password.isValid();
         final isConfirmPasswordValid = state.register.confirmPassword.isValid();
 
-        debugPrint(isConfirmPasswordValid.toString());
-
         if (isFullnameValid &&
             isEmailValid &&
             isPasswordValid &&
             isConfirmPasswordValid) {
+          final failureOrSuccess =
+              await _authRepository.signUpWithEmailAndPassword(
+            email: state.register.email.getOrElse(''),
+            password: state.register.password.getOrElse(''),
+          );
+
           emit(
             state.copyWith(
-              isFormfieldValid: true,
+              isRegistering: false,
+              failureOrSuccessRegisterOption: optionOf(failureOrSuccess),
             ),
           );
         }
+      },
+      genreChanged: (e) async {
+        var genres = state.register.selectedGenres;
+
+        if (genres.contains(e.genre)) {
+          genres = List.from(genres)..remove(e.genre);
+        } else {
+          if (state.register.selectedGenres.length < 4) {
+            genres = List.from(genres)..add(e.genre);
+          }
+        }
+
+        emit(
+          state.copyWith(
+            register: state.register.copyWith(
+              selectedGenres: genres,
+            ),
+          ),
+        );
+      },
+      languageChanged: (e) async {
+        emit(
+          state.copyWith(
+            register: state.register.copyWith(
+              selectedLanguage: e.language,
+            ),
+          ),
+        );
+      },
+      userUpdated: (e) async {
+        // emit(
+        //   state.copyWith(
+        //     isSubmitting: true,
+        //     failureOrSuccessRegisterOption: none(),
+        //   ),
+        // );
+
+        // final failureOrSuccess =
+        //     await _authRepository.signUpWithEmailAndPassword(
+        //   email: state.register.email.getOrCrash(),
+        //   password: state.register.password.getOrCrash(),
+        // );
+
+        // if (failureOrSuccess.isLeft()) {
+        //   emit(
+        //     state.copyWith(
+        //       isSubmitting: false,
+        //       // failureOrSuccessOption: optionOf(failureOrSuccess),
+        //     ),
+        //   );
+        // }
+
+        // if (failureOrSuccess.isRight()) {
+        //   await _authRepository.updateUser();
+        // }
       },
     );
   }

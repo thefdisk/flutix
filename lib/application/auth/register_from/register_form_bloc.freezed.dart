@@ -24,7 +24,10 @@ mixin _$RegisterFormEvent {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,7 +38,10 @@ mixin _$RegisterFormEvent {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,7 +52,10 @@ mixin _$RegisterFormEvent {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,7 +68,10 @@ mixin _$RegisterFormEvent {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,7 +82,10 @@ mixin _$RegisterFormEvent {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,7 +96,10 @@ mixin _$RegisterFormEvent {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,7 +195,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
     return photoProfileAdded(photoProfile);
   }
@@ -191,7 +212,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
     return photoProfileAdded?.call(photoProfile);
   }
@@ -205,7 +229,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
     if (photoProfileAdded != null) {
@@ -224,7 +251,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
     return photoProfileAdded(this);
   }
@@ -238,7 +268,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
     return photoProfileAdded?.call(this);
   }
@@ -252,7 +285,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
     if (photoProfileAdded != null) {
@@ -316,7 +352,10 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
     return photoProfileDeleted();
   }
@@ -330,7 +369,10 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
     return photoProfileDeleted?.call();
   }
@@ -344,7 +386,10 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
     if (photoProfileDeleted != null) {
@@ -363,7 +408,10 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
     return photoProfileDeleted(this);
   }
@@ -377,7 +425,10 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
     return photoProfileDeleted?.call(this);
   }
@@ -391,7 +442,10 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
     if (photoProfileDeleted != null) {
@@ -476,7 +530,10 @@ class _$_FullNameChanged implements _FullNameChanged {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
     return fullNameChanged(fullname);
   }
@@ -490,7 +547,10 @@ class _$_FullNameChanged implements _FullNameChanged {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
     return fullNameChanged?.call(fullname);
   }
@@ -504,7 +564,10 @@ class _$_FullNameChanged implements _FullNameChanged {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -523,7 +586,10 @@ class _$_FullNameChanged implements _FullNameChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
     return fullNameChanged(this);
   }
@@ -537,7 +603,10 @@ class _$_FullNameChanged implements _FullNameChanged {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
     return fullNameChanged?.call(this);
   }
@@ -551,7 +620,10 @@ class _$_FullNameChanged implements _FullNameChanged {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -640,7 +712,10 @@ class _$_EmailChanged implements _EmailChanged {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
     return emailChanged(email);
   }
@@ -654,7 +729,10 @@ class _$_EmailChanged implements _EmailChanged {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
     return emailChanged?.call(email);
   }
@@ -668,7 +746,10 @@ class _$_EmailChanged implements _EmailChanged {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -687,7 +768,10 @@ class _$_EmailChanged implements _EmailChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
     return emailChanged(this);
   }
@@ -701,7 +785,10 @@ class _$_EmailChanged implements _EmailChanged {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
     return emailChanged?.call(this);
   }
@@ -715,7 +802,10 @@ class _$_EmailChanged implements _EmailChanged {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -805,7 +895,10 @@ class _$_PasswordChanged implements _PasswordChanged {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
     return passwordChanged(password);
   }
@@ -819,7 +912,10 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
     return passwordChanged?.call(password);
   }
@@ -833,7 +929,10 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -852,7 +951,10 @@ class _$_PasswordChanged implements _PasswordChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
     return passwordChanged(this);
   }
@@ -866,7 +968,10 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
     return passwordChanged?.call(this);
   }
@@ -880,7 +985,10 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -971,7 +1079,10 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
     return confirmPasswordChanged(confirmPassword);
   }
@@ -985,7 +1096,10 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
     return confirmPasswordChanged?.call(confirmPassword);
   }
@@ -999,7 +1113,10 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
     if (confirmPasswordChanged != null) {
@@ -1018,7 +1135,10 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
     return confirmPasswordChanged(this);
   }
@@ -1032,7 +1152,10 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
     return confirmPasswordChanged?.call(this);
   }
@@ -1046,7 +1169,10 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
     if (confirmPasswordChanged != null) {
@@ -1067,35 +1193,35 @@ abstract class _ConfirmPasswordChanged implements RegisterFormEvent {
 }
 
 /// @nodoc
-abstract class _$$_ValidateFieldCopyWith<$Res> {
-  factory _$$_ValidateFieldCopyWith(
-          _$_ValidateField value, $Res Function(_$_ValidateField) then) =
-      __$$_ValidateFieldCopyWithImpl<$Res>;
+abstract class _$$_RegisterCopyWith<$Res> {
+  factory _$$_RegisterCopyWith(
+          _$_Register value, $Res Function(_$_Register) then) =
+      __$$_RegisterCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ValidateFieldCopyWithImpl<$Res>
-    extends _$RegisterFormEventCopyWithImpl<$Res, _$_ValidateField>
-    implements _$$_ValidateFieldCopyWith<$Res> {
-  __$$_ValidateFieldCopyWithImpl(
-      _$_ValidateField _value, $Res Function(_$_ValidateField) _then)
+class __$$_RegisterCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_Register>
+    implements _$$_RegisterCopyWith<$Res> {
+  __$$_RegisterCopyWithImpl(
+      _$_Register _value, $Res Function(_$_Register) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ValidateField implements _ValidateField {
-  const _$_ValidateField();
+class _$_Register implements _Register {
+  const _$_Register();
 
   @override
   String toString() {
-    return 'RegisterFormEvent.validateField()';
+    return 'RegisterFormEvent.register()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ValidateField);
+        (other.runtimeType == runtimeType && other is _$_Register);
   }
 
   @override
@@ -1110,9 +1236,12 @@ class _$_ValidateField implements _ValidateField {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function(String confirmPassword) confirmPasswordChanged,
-    required TResult Function() validateField,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
   }) {
-    return validateField();
+    return register();
   }
 
   @override
@@ -1124,9 +1253,12 @@ class _$_ValidateField implements _ValidateField {
     TResult? Function(String email)? emailChanged,
     TResult? Function(String password)? passwordChanged,
     TResult? Function(String confirmPassword)? confirmPasswordChanged,
-    TResult? Function()? validateField,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
   }) {
-    return validateField?.call();
+    return register?.call();
   }
 
   @override
@@ -1138,11 +1270,14 @@ class _$_ValidateField implements _ValidateField {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function(String confirmPassword)? confirmPasswordChanged,
-    TResult Function()? validateField,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
     required TResult orElse(),
   }) {
-    if (validateField != null) {
-      return validateField();
+    if (register != null) {
+      return register();
     }
     return orElse();
   }
@@ -1157,9 +1292,12 @@ class _$_ValidateField implements _ValidateField {
     required TResult Function(_PasswordChanged value) passwordChanged,
     required TResult Function(_ConfirmPasswordChanged value)
         confirmPasswordChanged,
-    required TResult Function(_ValidateField value) validateField,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
   }) {
-    return validateField(this);
+    return register(this);
   }
 
   @override
@@ -1171,9 +1309,12 @@ class _$_ValidateField implements _ValidateField {
     TResult? Function(_EmailChanged value)? emailChanged,
     TResult? Function(_PasswordChanged value)? passwordChanged,
     TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult? Function(_ValidateField value)? validateField,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
   }) {
-    return validateField?.call(this);
+    return register?.call(this);
   }
 
   @override
@@ -1185,28 +1326,547 @@ class _$_ValidateField implements _ValidateField {
     TResult Function(_EmailChanged value)? emailChanged,
     TResult Function(_PasswordChanged value)? passwordChanged,
     TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
-    TResult Function(_ValidateField value)? validateField,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
     required TResult orElse(),
   }) {
-    if (validateField != null) {
-      return validateField(this);
+    if (register != null) {
+      return register(this);
     }
     return orElse();
   }
 }
 
-abstract class _ValidateField implements RegisterFormEvent {
-  const factory _ValidateField() = _$_ValidateField;
+abstract class _Register implements RegisterFormEvent {
+  const factory _Register() = _$_Register;
+}
+
+/// @nodoc
+abstract class _$$_GenreChangedCopyWith<$Res> {
+  factory _$$_GenreChangedCopyWith(
+          _$_GenreChanged value, $Res Function(_$_GenreChanged) then) =
+      __$$_GenreChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String genre});
+}
+
+/// @nodoc
+class __$$_GenreChangedCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_GenreChanged>
+    implements _$$_GenreChangedCopyWith<$Res> {
+  __$$_GenreChangedCopyWithImpl(
+      _$_GenreChanged _value, $Res Function(_$_GenreChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? genre = null,
+  }) {
+    return _then(_$_GenreChanged(
+      null == genre
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GenreChanged implements _GenreChanged {
+  const _$_GenreChanged(this.genre);
+
+  @override
+  final String genre;
+
+  @override
+  String toString() {
+    return 'RegisterFormEvent.genreChanged(genre: $genre)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GenreChanged &&
+            (identical(other.genre, genre) || other.genre == genre));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, genre);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GenreChangedCopyWith<_$_GenreChanged> get copyWith =>
+      __$$_GenreChangedCopyWithImpl<_$_GenreChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
+    required TResult Function(String fullname) fullNameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
+  }) {
+    return genreChanged(genre);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
+    TResult? Function(String fullname)? fullNameChanged,
+    TResult? Function(String email)? emailChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
+  }) {
+    return genreChanged?.call(genre);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
+    TResult Function(String fullname)? fullNameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (genreChanged != null) {
+      return genreChanged(genre);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ConfirmPasswordChanged value)
+        confirmPasswordChanged,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
+  }) {
+    return genreChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_EmailChanged value)? emailChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
+  }) {
+    return genreChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (genreChanged != null) {
+      return genreChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GenreChanged implements RegisterFormEvent {
+  const factory _GenreChanged(final String genre) = _$_GenreChanged;
+
+  String get genre;
+  @JsonKey(ignore: true)
+  _$$_GenreChangedCopyWith<_$_GenreChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_languageChangedCopyWith<$Res> {
+  factory _$$_languageChangedCopyWith(
+          _$_languageChanged value, $Res Function(_$_languageChanged) then) =
+      __$$_languageChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String language});
+}
+
+/// @nodoc
+class __$$_languageChangedCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_languageChanged>
+    implements _$$_languageChangedCopyWith<$Res> {
+  __$$_languageChangedCopyWithImpl(
+      _$_languageChanged _value, $Res Function(_$_languageChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? language = null,
+  }) {
+    return _then(_$_languageChanged(
+      null == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_languageChanged implements _languageChanged {
+  const _$_languageChanged(this.language);
+
+  @override
+  final String language;
+
+  @override
+  String toString() {
+    return 'RegisterFormEvent.languageChanged(language: $language)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_languageChanged &&
+            (identical(other.language, language) ||
+                other.language == language));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, language);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_languageChangedCopyWith<_$_languageChanged> get copyWith =>
+      __$$_languageChangedCopyWithImpl<_$_languageChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
+    required TResult Function(String fullname) fullNameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
+  }) {
+    return languageChanged(language);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
+    TResult? Function(String fullname)? fullNameChanged,
+    TResult? Function(String email)? emailChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
+  }) {
+    return languageChanged?.call(language);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
+    TResult Function(String fullname)? fullNameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (languageChanged != null) {
+      return languageChanged(language);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ConfirmPasswordChanged value)
+        confirmPasswordChanged,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
+  }) {
+    return languageChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_EmailChanged value)? emailChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
+  }) {
+    return languageChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (languageChanged != null) {
+      return languageChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _languageChanged implements RegisterFormEvent {
+  const factory _languageChanged(final String language) = _$_languageChanged;
+
+  String get language;
+  @JsonKey(ignore: true)
+  _$$_languageChangedCopyWith<_$_languageChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_UserUpdatedCopyWith<$Res> {
+  factory _$$_UserUpdatedCopyWith(
+          _$_UserUpdated value, $Res Function(_$_UserUpdated) then) =
+      __$$_UserUpdatedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_UserUpdatedCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_UserUpdated>
+    implements _$$_UserUpdatedCopyWith<$Res> {
+  __$$_UserUpdatedCopyWithImpl(
+      _$_UserUpdated _value, $Res Function(_$_UserUpdated) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_UserUpdated implements _UserUpdated {
+  const _$_UserUpdated();
+
+  @override
+  String toString() {
+    return 'RegisterFormEvent.userUpdated()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_UserUpdated);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
+    required TResult Function(String fullname) fullNameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
+  }) {
+    return userUpdated();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
+    TResult? Function(String fullname)? fullNameChanged,
+    TResult? Function(String email)? emailChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
+  }) {
+    return userUpdated?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
+    TResult Function(String fullname)? fullNameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (userUpdated != null) {
+      return userUpdated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ConfirmPasswordChanged value)
+        confirmPasswordChanged,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
+  }) {
+    return userUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_EmailChanged value)? emailChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
+  }) {
+    return userUpdated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (userUpdated != null) {
+      return userUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserUpdated implements RegisterFormEvent {
+  const factory _UserUpdated() = _$_UserUpdated;
 }
 
 /// @nodoc
 mixin _$RegisterFormState {
   Register get register => throw _privateConstructorUsedError;
   User get user => throw _privateConstructorUsedError;
-  Option<Either<AuthFailure, Unit>> get failureOrSuccessOption =>
+  Option<Either<AuthFailure, Unit>> get failureOrSuccessRegisterOption =>
       throw _privateConstructorUsedError;
   bool get showErrorMessages => throw _privateConstructorUsedError;
-  bool get isFormfieldValid => throw _privateConstructorUsedError;
+  bool get isRegistering => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -1223,9 +1883,9 @@ abstract class $RegisterFormStateCopyWith<$Res> {
   $Res call(
       {Register register,
       User user,
-      Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+      Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption,
       bool showErrorMessages,
-      bool isFormfieldValid,
+      bool isRegistering,
       bool isSubmitting});
 
   $RegisterCopyWith<$Res> get register;
@@ -1247,9 +1907,9 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
   $Res call({
     Object? register = null,
     Object? user = null,
-    Object? failureOrSuccessOption = null,
+    Object? failureOrSuccessRegisterOption = null,
     Object? showErrorMessages = null,
-    Object? isFormfieldValid = null,
+    Object? isRegistering = null,
     Object? isSubmitting = null,
   }) {
     return _then(_value.copyWith(
@@ -1261,17 +1921,17 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      failureOrSuccessOption: null == failureOrSuccessOption
-          ? _value.failureOrSuccessOption
-          : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+      failureOrSuccessRegisterOption: null == failureOrSuccessRegisterOption
+          ? _value.failureOrSuccessRegisterOption
+          : failureOrSuccessRegisterOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
       showErrorMessages: null == showErrorMessages
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
               as bool,
-      isFormfieldValid: null == isFormfieldValid
-          ? _value.isFormfieldValid
-          : isFormfieldValid // ignore: cast_nullable_to_non_nullable
+      isRegistering: null == isRegistering
+          ? _value.isRegistering
+          : isRegistering // ignore: cast_nullable_to_non_nullable
               as bool,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
@@ -1308,9 +1968,9 @@ abstract class _$$_RegisterFormStateCopyWith<$Res>
   $Res call(
       {Register register,
       User user,
-      Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+      Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption,
       bool showErrorMessages,
-      bool isFormfieldValid,
+      bool isRegistering,
       bool isSubmitting});
 
   @override
@@ -1332,9 +1992,9 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
   $Res call({
     Object? register = null,
     Object? user = null,
-    Object? failureOrSuccessOption = null,
+    Object? failureOrSuccessRegisterOption = null,
     Object? showErrorMessages = null,
-    Object? isFormfieldValid = null,
+    Object? isRegistering = null,
     Object? isSubmitting = null,
   }) {
     return _then(_$_RegisterFormState(
@@ -1346,17 +2006,17 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      failureOrSuccessOption: null == failureOrSuccessOption
-          ? _value.failureOrSuccessOption
-          : failureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+      failureOrSuccessRegisterOption: null == failureOrSuccessRegisterOption
+          ? _value.failureOrSuccessRegisterOption
+          : failureOrSuccessRegisterOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
       showErrorMessages: null == showErrorMessages
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
               as bool,
-      isFormfieldValid: null == isFormfieldValid
-          ? _value.isFormfieldValid
-          : isFormfieldValid // ignore: cast_nullable_to_non_nullable
+      isRegistering: null == isRegistering
+          ? _value.isRegistering
+          : isRegistering // ignore: cast_nullable_to_non_nullable
               as bool,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
@@ -1372,9 +2032,9 @@ class _$_RegisterFormState extends _RegisterFormState {
   const _$_RegisterFormState(
       {required this.register,
       required this.user,
-      required this.failureOrSuccessOption,
+      required this.failureOrSuccessRegisterOption,
       this.showErrorMessages = false,
-      this.isFormfieldValid = false,
+      this.isRegistering = false,
       this.isSubmitting = false})
       : super._();
 
@@ -1383,20 +2043,20 @@ class _$_RegisterFormState extends _RegisterFormState {
   @override
   final User user;
   @override
-  final Option<Either<AuthFailure, Unit>> failureOrSuccessOption;
+  final Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption;
   @override
   @JsonKey()
   final bool showErrorMessages;
   @override
   @JsonKey()
-  final bool isFormfieldValid;
+  final bool isRegistering;
   @override
   @JsonKey()
   final bool isSubmitting;
 
   @override
   String toString() {
-    return 'RegisterFormState(register: $register, user: $user, failureOrSuccessOption: $failureOrSuccessOption, showErrorMessages: $showErrorMessages, isFormfieldValid: $isFormfieldValid, isSubmitting: $isSubmitting)';
+    return 'RegisterFormState(register: $register, user: $user, failureOrSuccessRegisterOption: $failureOrSuccessRegisterOption, showErrorMessages: $showErrorMessages, isRegistering: $isRegistering, isSubmitting: $isSubmitting)';
   }
 
   @override
@@ -1407,12 +2067,14 @@ class _$_RegisterFormState extends _RegisterFormState {
             (identical(other.register, register) ||
                 other.register == register) &&
             (identical(other.user, user) || other.user == user) &&
-            (identical(other.failureOrSuccessOption, failureOrSuccessOption) ||
-                other.failureOrSuccessOption == failureOrSuccessOption) &&
+            (identical(other.failureOrSuccessRegisterOption,
+                    failureOrSuccessRegisterOption) ||
+                other.failureOrSuccessRegisterOption ==
+                    failureOrSuccessRegisterOption) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 other.showErrorMessages == showErrorMessages) &&
-            (identical(other.isFormfieldValid, isFormfieldValid) ||
-                other.isFormfieldValid == isFormfieldValid) &&
+            (identical(other.isRegistering, isRegistering) ||
+                other.isRegistering == isRegistering) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting));
   }
@@ -1422,9 +2084,9 @@ class _$_RegisterFormState extends _RegisterFormState {
       runtimeType,
       register,
       user,
-      failureOrSuccessOption,
+      failureOrSuccessRegisterOption,
       showErrorMessages,
-      isFormfieldValid,
+      isRegistering,
       isSubmitting);
 
   @JsonKey(ignore: true)
@@ -1439,9 +2101,10 @@ abstract class _RegisterFormState extends RegisterFormState {
   const factory _RegisterFormState(
       {required final Register register,
       required final User user,
-      required final Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
+      required final Option<Either<AuthFailure, Unit>>
+          failureOrSuccessRegisterOption,
       final bool showErrorMessages,
-      final bool isFormfieldValid,
+      final bool isRegistering,
       final bool isSubmitting}) = _$_RegisterFormState;
   const _RegisterFormState._() : super._();
 
@@ -1450,11 +2113,11 @@ abstract class _RegisterFormState extends RegisterFormState {
   @override
   User get user;
   @override
-  Option<Either<AuthFailure, Unit>> get failureOrSuccessOption;
+  Option<Either<AuthFailure, Unit>> get failureOrSuccessRegisterOption;
   @override
   bool get showErrorMessages;
   @override
-  bool get isFormfieldValid;
+  bool get isRegistering;
   @override
   bool get isSubmitting;
   @override

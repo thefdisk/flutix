@@ -11,6 +11,7 @@ class AppTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.onChanged,
     this.validator,
+    this.keyboardType,
   });
 
   final String? labelText;
@@ -18,6 +19,7 @@ class AppTextFormField extends StatelessWidget {
   final bool obscureText;
   final Function(String value)? onChanged;
   final String? Function(String? value)? validator;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class AppTextFormField extends StatelessWidget {
       obscureText: obscureText,
       onChanged: onChanged,
       validator: validator,
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         labelText: labelText,
         labelStyle: AppTypography(context)
