@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 
 import 'auth_failure.dart';
@@ -8,7 +10,7 @@ abstract class IAuthRepository {
     required String email,
     required String password,
   });
-  Future<Either<AuthFailure, Unit>> signUpWithEmailAndPassword({
+  Future<Either<AuthFailure, User>> signUpWithEmailAndPassword({
     required String email,
     required String password,
   });
@@ -17,4 +19,8 @@ abstract class IAuthRepository {
   });
   Stream<User> getAuthState();
   Future<Either<AuthFailure, User>> getDetailUser();
+  Future<Either<AuthFailure, String>> uploadPhotoProfile({
+    required User user,
+    required File photoImage,
+  });
 }

@@ -5,21 +5,22 @@ part 'user.freezed.dart';
 @freezed
 class User with _$User {
   const User._();
+
   const factory User({
-    required String id,
+    required String uid,
     required String email,
     required String name,
-    required String profilePicture,
+    required String photoUrl,
     required List<String> selectedGenres,
     required String selectedLanguage,
     required int balance,
   }) = _User;
 
   factory User.empty() => const User(
-        id: '',
+        uid: '',
         email: '',
         name: '',
-        profilePicture: '',
+        photoUrl: '',
         selectedGenres: [],
         selectedLanguage: '',
         balance: 0,

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,10 +15,9 @@ class PhotoProfileFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<RegisterFormBloc, RegisterFormState>(
-      buildWhen: (p, c) =>
-          p.register.profilePicture != c.register.profilePicture,
+      buildWhen: (p, c) => p.register.photoImage != c.register.photoImage,
       builder: (context, state) {
-        final profilePicture = state.register.profilePicture;
+        final profilePicture = state.register.photoImage;
 
         return SizedBox(
           height: 104,
@@ -50,7 +51,7 @@ class PhotoProfileFieldWidget extends StatelessWidget {
                             context
                                 .read<RegisterFormBloc>()
                                 .add(RegisterFormEvent.photoProfileAdded(
-                                  image,
+                                  File(image.path),
                                 ));
                           }
                         }

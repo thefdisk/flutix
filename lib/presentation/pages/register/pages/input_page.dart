@@ -25,15 +25,12 @@ class RegisterInputPage extends StatelessWidget {
           context.loaderOverlay.hide();
         }
 
-        state.failureOrSuccessRegisterOption.fold(
-          () {},
-          (either) => either.fold(
-            (f) => f.maybeMap(
-              orElse: () => AppToast(context).showAuthFailureToast(f),
-              emailAlreadyInUse: (_) => print('Email already in use'),
-            ),
-            (_) => context.tabsRouter.setActiveIndex(1),
+        state.failureOrSuccessRegister?.fold(
+          (f) => f.maybeMap(
+            orElse: () => AppToast(context).showAuthFailureToast(f),
+            emailAlreadyInUse: (_) => print('Email already in use'),
           ),
+          (_) => context.tabsRouter.setActiveIndex(1),
         );
       },
       child: Scaffold(

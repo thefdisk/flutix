@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$RegisterFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -32,7 +32,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -46,7 +46,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -129,7 +129,7 @@ abstract class _$$_PhotoProfileAddedCopyWith<$Res> {
           $Res Function(_$_PhotoProfileAdded) then) =
       __$$_PhotoProfileAddedCopyWithImpl<$Res>;
   @useResult
-  $Res call({File photoProfile});
+  $Res call({File photoImage});
 }
 
 /// @nodoc
@@ -143,12 +143,12 @@ class __$$_PhotoProfileAddedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? photoProfile = null,
+    Object? photoImage = null,
   }) {
     return _then(_$_PhotoProfileAdded(
-      null == photoProfile
-          ? _value.photoProfile
-          : photoProfile // ignore: cast_nullable_to_non_nullable
+      null == photoImage
+          ? _value.photoImage
+          : photoImage // ignore: cast_nullable_to_non_nullable
               as File,
     ));
   }
@@ -157,14 +157,14 @@ class __$$_PhotoProfileAddedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PhotoProfileAdded implements _PhotoProfileAdded {
-  const _$_PhotoProfileAdded(this.photoProfile);
+  const _$_PhotoProfileAdded(this.photoImage);
 
   @override
-  final File photoProfile;
+  final File photoImage;
 
   @override
   String toString() {
-    return 'RegisterFormEvent.photoProfileAdded(photoProfile: $photoProfile)';
+    return 'RegisterFormEvent.photoProfileAdded(photoImage: $photoImage)';
   }
 
   @override
@@ -172,12 +172,12 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PhotoProfileAdded &&
-            (identical(other.photoProfile, photoProfile) ||
-                other.photoProfile == photoProfile));
+            (identical(other.photoImage, photoImage) ||
+                other.photoImage == photoImage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, photoProfile);
+  int get hashCode => Object.hash(runtimeType, photoImage);
 
   @JsonKey(ignore: true)
   @override
@@ -189,7 +189,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -200,13 +200,13 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     required TResult Function(String language) languageChanged,
     required TResult Function() userUpdated,
   }) {
-    return photoProfileAdded(photoProfile);
+    return photoProfileAdded(photoImage);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -217,13 +217,13 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     TResult? Function(String language)? languageChanged,
     TResult? Function()? userUpdated,
   }) {
-    return photoProfileAdded?.call(photoProfile);
+    return photoProfileAdded?.call(photoImage);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -236,7 +236,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
     required TResult orElse(),
   }) {
     if (photoProfileAdded != null) {
-      return photoProfileAdded(photoProfile);
+      return photoProfileAdded(photoImage);
     }
     return orElse();
   }
@@ -299,10 +299,10 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
 }
 
 abstract class _PhotoProfileAdded implements RegisterFormEvent {
-  const factory _PhotoProfileAdded(final File photoProfile) =
+  const factory _PhotoProfileAdded(final File photoImage) =
       _$_PhotoProfileAdded;
 
-  File get photoProfile;
+  File get photoImage;
   @JsonKey(ignore: true)
   _$$_PhotoProfileAddedCopyWith<_$_PhotoProfileAdded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -346,7 +346,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -363,7 +363,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -380,7 +380,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -524,7 +524,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -541,7 +541,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -558,7 +558,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -706,7 +706,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -723,7 +723,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -740,7 +740,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -889,7 +889,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -906,7 +906,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -923,7 +923,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -1073,7 +1073,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -1090,7 +1090,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -1107,7 +1107,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -1230,7 +1230,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -1247,7 +1247,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -1264,7 +1264,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -1407,7 +1407,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -1424,7 +1424,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -1441,7 +1441,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -1590,7 +1590,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -1607,7 +1607,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -1624,7 +1624,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -1746,7 +1746,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(File photoProfile) photoProfileAdded,
+    required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
     required TResult Function(String email) emailChanged,
@@ -1763,7 +1763,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(File photoProfile)? photoProfileAdded,
+    TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
     TResult? Function(String email)? emailChanged,
@@ -1780,7 +1780,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(File photoProfile)? photoProfileAdded,
+    TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
     TResult Function(String email)? emailChanged,
@@ -1863,11 +1863,15 @@ abstract class _UserUpdated implements RegisterFormEvent {
 mixin _$RegisterFormState {
   Register get register => throw _privateConstructorUsedError;
   User get user => throw _privateConstructorUsedError;
-  Option<Either<AuthFailure, Unit>> get failureOrSuccessRegisterOption =>
+  Either<AuthFailure, User>? get failureOrSuccessRegister =>
+      throw _privateConstructorUsedError;
+  Either<AuthFailure, String>? get failureOrSuccessUploadPhotoProfile =>
+      throw _privateConstructorUsedError;
+  Either<AuthFailure, Unit>? get failureOrSuccessUpdateUser =>
       throw _privateConstructorUsedError;
   bool get showErrorMessages => throw _privateConstructorUsedError;
   bool get isRegistering => throw _privateConstructorUsedError;
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isUpdatingUser => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RegisterFormStateCopyWith<RegisterFormState> get copyWith =>
@@ -1883,10 +1887,12 @@ abstract class $RegisterFormStateCopyWith<$Res> {
   $Res call(
       {Register register,
       User user,
-      Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption,
+      Either<AuthFailure, User>? failureOrSuccessRegister,
+      Either<AuthFailure, String>? failureOrSuccessUploadPhotoProfile,
+      Either<AuthFailure, Unit>? failureOrSuccessUpdateUser,
       bool showErrorMessages,
       bool isRegistering,
-      bool isSubmitting});
+      bool isUpdatingUser});
 
   $RegisterCopyWith<$Res> get register;
   $UserCopyWith<$Res> get user;
@@ -1907,10 +1913,12 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
   $Res call({
     Object? register = null,
     Object? user = null,
-    Object? failureOrSuccessRegisterOption = null,
+    Object? failureOrSuccessRegister = freezed,
+    Object? failureOrSuccessUploadPhotoProfile = freezed,
+    Object? failureOrSuccessUpdateUser = freezed,
     Object? showErrorMessages = null,
     Object? isRegistering = null,
-    Object? isSubmitting = null,
+    Object? isUpdatingUser = null,
   }) {
     return _then(_value.copyWith(
       register: null == register
@@ -1921,10 +1929,19 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      failureOrSuccessRegisterOption: null == failureOrSuccessRegisterOption
-          ? _value.failureOrSuccessRegisterOption
-          : failureOrSuccessRegisterOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<AuthFailure, Unit>>,
+      failureOrSuccessRegister: freezed == failureOrSuccessRegister
+          ? _value.failureOrSuccessRegister
+          : failureOrSuccessRegister // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, User>?,
+      failureOrSuccessUploadPhotoProfile: freezed ==
+              failureOrSuccessUploadPhotoProfile
+          ? _value.failureOrSuccessUploadPhotoProfile
+          : failureOrSuccessUploadPhotoProfile // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, String>?,
+      failureOrSuccessUpdateUser: freezed == failureOrSuccessUpdateUser
+          ? _value.failureOrSuccessUpdateUser
+          : failureOrSuccessUpdateUser // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, Unit>?,
       showErrorMessages: null == showErrorMessages
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
@@ -1933,9 +1950,9 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
           ? _value.isRegistering
           : isRegistering // ignore: cast_nullable_to_non_nullable
               as bool,
-      isSubmitting: null == isSubmitting
-          ? _value.isSubmitting
-          : isSubmitting // ignore: cast_nullable_to_non_nullable
+      isUpdatingUser: null == isUpdatingUser
+          ? _value.isUpdatingUser
+          : isUpdatingUser // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -1968,10 +1985,12 @@ abstract class _$$_RegisterFormStateCopyWith<$Res>
   $Res call(
       {Register register,
       User user,
-      Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption,
+      Either<AuthFailure, User>? failureOrSuccessRegister,
+      Either<AuthFailure, String>? failureOrSuccessUploadPhotoProfile,
+      Either<AuthFailure, Unit>? failureOrSuccessUpdateUser,
       bool showErrorMessages,
       bool isRegistering,
-      bool isSubmitting});
+      bool isUpdatingUser});
 
   @override
   $RegisterCopyWith<$Res> get register;
@@ -1992,10 +2011,12 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
   $Res call({
     Object? register = null,
     Object? user = null,
-    Object? failureOrSuccessRegisterOption = null,
+    Object? failureOrSuccessRegister = freezed,
+    Object? failureOrSuccessUploadPhotoProfile = freezed,
+    Object? failureOrSuccessUpdateUser = freezed,
     Object? showErrorMessages = null,
     Object? isRegistering = null,
-    Object? isSubmitting = null,
+    Object? isUpdatingUser = null,
   }) {
     return _then(_$_RegisterFormState(
       register: null == register
@@ -2006,10 +2027,19 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      failureOrSuccessRegisterOption: null == failureOrSuccessRegisterOption
-          ? _value.failureOrSuccessRegisterOption
-          : failureOrSuccessRegisterOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<AuthFailure, Unit>>,
+      failureOrSuccessRegister: freezed == failureOrSuccessRegister
+          ? _value.failureOrSuccessRegister
+          : failureOrSuccessRegister // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, User>?,
+      failureOrSuccessUploadPhotoProfile: freezed ==
+              failureOrSuccessUploadPhotoProfile
+          ? _value.failureOrSuccessUploadPhotoProfile
+          : failureOrSuccessUploadPhotoProfile // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, String>?,
+      failureOrSuccessUpdateUser: freezed == failureOrSuccessUpdateUser
+          ? _value.failureOrSuccessUpdateUser
+          : failureOrSuccessUpdateUser // ignore: cast_nullable_to_non_nullable
+              as Either<AuthFailure, Unit>?,
       showErrorMessages: null == showErrorMessages
           ? _value.showErrorMessages
           : showErrorMessages // ignore: cast_nullable_to_non_nullable
@@ -2018,9 +2048,9 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
           ? _value.isRegistering
           : isRegistering // ignore: cast_nullable_to_non_nullable
               as bool,
-      isSubmitting: null == isSubmitting
-          ? _value.isSubmitting
-          : isSubmitting // ignore: cast_nullable_to_non_nullable
+      isUpdatingUser: null == isUpdatingUser
+          ? _value.isUpdatingUser
+          : isUpdatingUser // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -2032,10 +2062,12 @@ class _$_RegisterFormState extends _RegisterFormState {
   const _$_RegisterFormState(
       {required this.register,
       required this.user,
-      required this.failureOrSuccessRegisterOption,
+      required this.failureOrSuccessRegister,
+      required this.failureOrSuccessUploadPhotoProfile,
+      required this.failureOrSuccessUpdateUser,
       this.showErrorMessages = false,
       this.isRegistering = false,
-      this.isSubmitting = false})
+      this.isUpdatingUser = false})
       : super._();
 
   @override
@@ -2043,7 +2075,11 @@ class _$_RegisterFormState extends _RegisterFormState {
   @override
   final User user;
   @override
-  final Option<Either<AuthFailure, Unit>> failureOrSuccessRegisterOption;
+  final Either<AuthFailure, User>? failureOrSuccessRegister;
+  @override
+  final Either<AuthFailure, String>? failureOrSuccessUploadPhotoProfile;
+  @override
+  final Either<AuthFailure, Unit>? failureOrSuccessUpdateUser;
   @override
   @JsonKey()
   final bool showErrorMessages;
@@ -2052,11 +2088,11 @@ class _$_RegisterFormState extends _RegisterFormState {
   final bool isRegistering;
   @override
   @JsonKey()
-  final bool isSubmitting;
+  final bool isUpdatingUser;
 
   @override
   String toString() {
-    return 'RegisterFormState(register: $register, user: $user, failureOrSuccessRegisterOption: $failureOrSuccessRegisterOption, showErrorMessages: $showErrorMessages, isRegistering: $isRegistering, isSubmitting: $isSubmitting)';
+    return 'RegisterFormState(register: $register, user: $user, failureOrSuccessRegister: $failureOrSuccessRegister, failureOrSuccessUploadPhotoProfile: $failureOrSuccessUploadPhotoProfile, failureOrSuccessUpdateUser: $failureOrSuccessUpdateUser, showErrorMessages: $showErrorMessages, isRegistering: $isRegistering, isUpdatingUser: $isUpdatingUser)';
   }
 
   @override
@@ -2067,16 +2103,23 @@ class _$_RegisterFormState extends _RegisterFormState {
             (identical(other.register, register) ||
                 other.register == register) &&
             (identical(other.user, user) || other.user == user) &&
-            (identical(other.failureOrSuccessRegisterOption,
-                    failureOrSuccessRegisterOption) ||
-                other.failureOrSuccessRegisterOption ==
-                    failureOrSuccessRegisterOption) &&
+            (identical(
+                    other.failureOrSuccessRegister, failureOrSuccessRegister) ||
+                other.failureOrSuccessRegister == failureOrSuccessRegister) &&
+            (identical(other.failureOrSuccessUploadPhotoProfile,
+                    failureOrSuccessUploadPhotoProfile) ||
+                other.failureOrSuccessUploadPhotoProfile ==
+                    failureOrSuccessUploadPhotoProfile) &&
+            (identical(other.failureOrSuccessUpdateUser,
+                    failureOrSuccessUpdateUser) ||
+                other.failureOrSuccessUpdateUser ==
+                    failureOrSuccessUpdateUser) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 other.showErrorMessages == showErrorMessages) &&
             (identical(other.isRegistering, isRegistering) ||
                 other.isRegistering == isRegistering) &&
-            (identical(other.isSubmitting, isSubmitting) ||
-                other.isSubmitting == isSubmitting));
+            (identical(other.isUpdatingUser, isUpdatingUser) ||
+                other.isUpdatingUser == isUpdatingUser));
   }
 
   @override
@@ -2084,10 +2127,12 @@ class _$_RegisterFormState extends _RegisterFormState {
       runtimeType,
       register,
       user,
-      failureOrSuccessRegisterOption,
+      failureOrSuccessRegister,
+      failureOrSuccessUploadPhotoProfile,
+      failureOrSuccessUpdateUser,
       showErrorMessages,
       isRegistering,
-      isSubmitting);
+      isUpdatingUser);
 
   @JsonKey(ignore: true)
   @override
@@ -2101,11 +2146,13 @@ abstract class _RegisterFormState extends RegisterFormState {
   const factory _RegisterFormState(
       {required final Register register,
       required final User user,
-      required final Option<Either<AuthFailure, Unit>>
-          failureOrSuccessRegisterOption,
+      required final Either<AuthFailure, User>? failureOrSuccessRegister,
+      required final Either<AuthFailure, String>?
+          failureOrSuccessUploadPhotoProfile,
+      required final Either<AuthFailure, Unit>? failureOrSuccessUpdateUser,
       final bool showErrorMessages,
       final bool isRegistering,
-      final bool isSubmitting}) = _$_RegisterFormState;
+      final bool isUpdatingUser}) = _$_RegisterFormState;
   const _RegisterFormState._() : super._();
 
   @override
@@ -2113,13 +2160,17 @@ abstract class _RegisterFormState extends RegisterFormState {
   @override
   User get user;
   @override
-  Option<Either<AuthFailure, Unit>> get failureOrSuccessRegisterOption;
+  Either<AuthFailure, User>? get failureOrSuccessRegister;
+  @override
+  Either<AuthFailure, String>? get failureOrSuccessUploadPhotoProfile;
+  @override
+  Either<AuthFailure, Unit>? get failureOrSuccessUpdateUser;
   @override
   bool get showErrorMessages;
   @override
   bool get isRegistering;
   @override
-  bool get isSubmitting;
+  bool get isUpdatingUser;
   @override
   @JsonKey(ignore: true)
   _$$_RegisterFormStateCopyWith<_$_RegisterFormState> get copyWith =>

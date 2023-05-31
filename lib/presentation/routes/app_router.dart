@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 
+import '../pages/login/login_page.dart';
 import '../pages/register/pages/confirm_page.dart';
 import '../pages/register/pages/input_page.dart';
 import '../pages/register/pages/preference_page.dart';
@@ -25,5 +26,8 @@ class AppRouter extends _$AppRouter {
             AutoRoute(page: RegisterConfirmRoute.page),
           ],
         ),
+
+        /// Login
+        AutoRoute(page: LoginRoute.page),
       ];
 }

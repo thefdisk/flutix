@@ -16,11 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Register {
+  String get uid => throw _privateConstructorUsedError;
   StringSingleLine get name => throw _privateConstructorUsedError;
   Email get email => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   ConfirmPassword get confirmPassword => throw _privateConstructorUsedError;
-  File? get profilePicture => throw _privateConstructorUsedError;
+  File? get photoImage => throw _privateConstructorUsedError;
+  String get photoUrl => throw _privateConstructorUsedError;
   List<String> get selectedGenres => throw _privateConstructorUsedError;
   String get selectedLanguage => throw _privateConstructorUsedError;
 
@@ -35,11 +37,13 @@ abstract class $RegisterCopyWith<$Res> {
       _$RegisterCopyWithImpl<$Res, Register>;
   @useResult
   $Res call(
-      {StringSingleLine name,
+      {String uid,
+      StringSingleLine name,
       Email email,
       Password password,
       ConfirmPassword confirmPassword,
-      File? profilePicture,
+      File? photoImage,
+      String photoUrl,
       List<String> selectedGenres,
       String selectedLanguage});
 }
@@ -57,15 +61,21 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? uid = null,
     Object? name = null,
     Object? email = null,
     Object? password = null,
     Object? confirmPassword = null,
-    Object? profilePicture = freezed,
+    Object? photoImage = freezed,
+    Object? photoUrl = null,
     Object? selectedGenres = null,
     Object? selectedLanguage = null,
   }) {
     return _then(_value.copyWith(
+      uid: null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -82,10 +92,14 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
           ? _value.confirmPassword
           : confirmPassword // ignore: cast_nullable_to_non_nullable
               as ConfirmPassword,
-      profilePicture: freezed == profilePicture
-          ? _value.profilePicture
-          : profilePicture // ignore: cast_nullable_to_non_nullable
+      photoImage: freezed == photoImage
+          ? _value.photoImage
+          : photoImage // ignore: cast_nullable_to_non_nullable
               as File?,
+      photoUrl: null == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       selectedGenres: null == selectedGenres
           ? _value.selectedGenres
           : selectedGenres // ignore: cast_nullable_to_non_nullable
@@ -106,11 +120,13 @@ abstract class _$$_RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {StringSingleLine name,
+      {String uid,
+      StringSingleLine name,
       Email email,
       Password password,
       ConfirmPassword confirmPassword,
-      File? profilePicture,
+      File? photoImage,
+      String photoUrl,
       List<String> selectedGenres,
       String selectedLanguage});
 }
@@ -126,15 +142,21 @@ class __$$_RegisterCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? uid = null,
     Object? name = null,
     Object? email = null,
     Object? password = null,
     Object? confirmPassword = null,
-    Object? profilePicture = freezed,
+    Object? photoImage = freezed,
+    Object? photoUrl = null,
     Object? selectedGenres = null,
     Object? selectedLanguage = null,
   }) {
     return _then(_$_Register(
+      uid: null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -151,10 +173,14 @@ class __$$_RegisterCopyWithImpl<$Res>
           ? _value.confirmPassword
           : confirmPassword // ignore: cast_nullable_to_non_nullable
               as ConfirmPassword,
-      profilePicture: freezed == profilePicture
-          ? _value.profilePicture
-          : profilePicture // ignore: cast_nullable_to_non_nullable
+      photoImage: freezed == photoImage
+          ? _value.photoImage
+          : photoImage // ignore: cast_nullable_to_non_nullable
               as File?,
+      photoUrl: null == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       selectedGenres: null == selectedGenres
           ? _value._selectedGenres
           : selectedGenres // ignore: cast_nullable_to_non_nullable
@@ -171,16 +197,20 @@ class __$$_RegisterCopyWithImpl<$Res>
 
 class _$_Register extends _Register {
   const _$_Register(
-      {required this.name,
+      {required this.uid,
+      required this.name,
       required this.email,
       required this.password,
       required this.confirmPassword,
-      this.profilePicture,
+      this.photoImage,
+      required this.photoUrl,
       required final List<String> selectedGenres,
       required this.selectedLanguage})
       : _selectedGenres = selectedGenres,
         super._();
 
+  @override
+  final String uid;
   @override
   final StringSingleLine name;
   @override
@@ -190,7 +220,9 @@ class _$_Register extends _Register {
   @override
   final ConfirmPassword confirmPassword;
   @override
-  final File? profilePicture;
+  final File? photoImage;
+  @override
+  final String photoUrl;
   final List<String> _selectedGenres;
   @override
   List<String> get selectedGenres {
@@ -204,7 +236,7 @@ class _$_Register extends _Register {
 
   @override
   String toString() {
-    return 'Register(name: $name, email: $email, password: $password, confirmPassword: $confirmPassword, profilePicture: $profilePicture, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage)';
+    return 'Register(uid: $uid, name: $name, email: $email, password: $password, confirmPassword: $confirmPassword, photoImage: $photoImage, photoUrl: $photoUrl, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage)';
   }
 
   @override
@@ -212,14 +244,17 @@ class _$_Register extends _Register {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Register &&
+            (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.confirmPassword, confirmPassword) ||
                 other.confirmPassword == confirmPassword) &&
-            (identical(other.profilePicture, profilePicture) ||
-                other.profilePicture == profilePicture) &&
+            (identical(other.photoImage, photoImage) ||
+                other.photoImage == photoImage) &&
+            (identical(other.photoUrl, photoUrl) ||
+                other.photoUrl == photoUrl) &&
             const DeepCollectionEquality()
                 .equals(other._selectedGenres, _selectedGenres) &&
             (identical(other.selectedLanguage, selectedLanguage) ||
@@ -229,11 +264,13 @@ class _$_Register extends _Register {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      uid,
       name,
       email,
       password,
       confirmPassword,
-      profilePicture,
+      photoImage,
+      photoUrl,
       const DeepCollectionEquality().hash(_selectedGenres),
       selectedLanguage);
 
@@ -246,15 +283,19 @@ class _$_Register extends _Register {
 
 abstract class _Register extends Register {
   const factory _Register(
-      {required final StringSingleLine name,
+      {required final String uid,
+      required final StringSingleLine name,
       required final Email email,
       required final Password password,
       required final ConfirmPassword confirmPassword,
-      final File? profilePicture,
+      final File? photoImage,
+      required final String photoUrl,
       required final List<String> selectedGenres,
       required final String selectedLanguage}) = _$_Register;
   const _Register._() : super._();
 
+  @override
+  String get uid;
   @override
   StringSingleLine get name;
   @override
@@ -264,7 +305,9 @@ abstract class _Register extends Register {
   @override
   ConfirmPassword get confirmPassword;
   @override
-  File? get profilePicture;
+  File? get photoImage;
+  @override
+  String get photoUrl;
   @override
   List<String> get selectedGenres;
   @override
