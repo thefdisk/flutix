@@ -20,13 +20,23 @@ class UserDto with _$UserDto {
     required int balance,
   }) = _UserDto;
 
+  factory UserDto.empty() => const UserDto(
+        uid: '',
+        email: '',
+        name: '',
+        photoUrl: '',
+        selectedGenres: [],
+        selectedLanguage: '',
+        balance: 0,
+      );
+
   factory UserDto.fromJson(Map<String, dynamic> json) =>
       _$UserDtoFromJson(json);
 
   factory UserDto.fromFirebaseCredential(
-    auth.UserCredential firebaseUserCredenctial,
+    auth.UserCredential firebaseUserCredential,
   ) {
-    final firebaseUser = firebaseUserCredenctial.user!;
+    final firebaseUser = firebaseUserCredential.user!;
 
     return UserDto(
       uid: firebaseUser.uid,
@@ -38,6 +48,16 @@ class UserDto with _$UserDto {
       balance: 0,
     );
   }
+
+  factory UserDto.fromFirebaseUser(auth.User firebaseUser) => UserDto(
+        uid: firebaseUser.uid,
+        email: firebaseUser.email ?? '',
+        name: '',
+        photoUrl: '',
+        selectedGenres: [],
+        selectedLanguage: '',
+        balance: 0,
+      );
 
   factory UserDto.fromDomain(User user) => UserDto(
         uid: user.uid,

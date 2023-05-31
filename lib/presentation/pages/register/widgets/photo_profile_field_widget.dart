@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../application/auth/register_from/register_form_bloc.dart';
+import '../../../../application/auth/register_form/register_form_bloc.dart';
 import '../../../../common/functions/app_functions.dart';
 import '../../../components/gen/assets.gen.dart';
 

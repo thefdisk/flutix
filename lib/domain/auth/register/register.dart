@@ -35,6 +35,17 @@ class Register with _$Register {
         selectedLanguage: 'English',
       );
 
+  factory Register.fromUser(User user) => Register(
+        uid: user.uid,
+        name: StringSingleLine(''),
+        email: Email(user.email),
+        password: Password(''),
+        confirmPassword: ConfirmPassword('', ''),
+        photoUrl: '',
+        selectedGenres: [],
+        selectedLanguage: '',
+      );
+
   User toUserDomain() => User(
         uid: uid,
         email: email.getOrCrash(),

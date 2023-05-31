@@ -3,9 +3,9 @@ part of 'register_form_bloc.dart';
 @freezed
 class RegisterFormState with _$RegisterFormState {
   const RegisterFormState._();
+
   const factory RegisterFormState({
     required Register register,
-    required User user,
     required Either<AuthFailure, User>? failureOrSuccessRegister,
     required Either<AuthFailure, String>? failureOrSuccessUploadPhotoProfile,
     required Either<AuthFailure, Unit>? failureOrSuccessUpdateUser,
@@ -16,7 +16,6 @@ class RegisterFormState with _$RegisterFormState {
 
   factory RegisterFormState.initial() => RegisterFormState(
         register: Register.empty(),
-        user: User.empty(),
         failureOrSuccessRegister: null,
         failureOrSuccessUploadPhotoProfile: null,
         failureOrSuccessUpdateUser: null,

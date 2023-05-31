@@ -47,7 +47,7 @@ class WelcomePage extends StatelessWidget {
             ),
             const SizedBox(height: 70),
             AppElevatedButton(
-              onPressed: () => context.pushRoute(const RegisterRoute()),
+              onPressed: () => context.pushRoute(RegisterRoute()),
               child: const Text('Get Started'),
             ),
             const SizedBox(height: 20),

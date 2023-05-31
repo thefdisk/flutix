@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../application/auth/register_from/register_form_bloc.dart';
+import '../../../../application/auth/register_form/register_form_bloc.dart';
 import '../../../components/gen/colors.gen.dart';
 import '../../../components/styles/typography.dart';
 import '../../../components/toast/app_toast.dart';
@@ -28,7 +28,7 @@ class RegisterInputPage extends StatelessWidget {
         state.failureOrSuccessRegister?.fold(
           (f) => f.maybeMap(
             orElse: () => AppToast(context).showAuthFailureToast(f),
-            emailAlreadyInUse: (_) => print('Email already in use'),
+            emailAlreadyInUse: (_) => debugPrint('Email already in use'),
           ),
           (_) => context.tabsRouter.setActiveIndex(1),
         );

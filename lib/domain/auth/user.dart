@@ -25,4 +25,9 @@ class User with _$User {
         selectedLanguage: '',
         balance: 0,
       );
+
+  bool get isPreferenceFilled =>
+      name.isNotEmpty &&
+      selectedGenres.isNotEmpty &&
+      selectedLanguage.isNotEmpty;
 }

@@ -27,8 +27,8 @@ void main() async {
     kReleaseMode ? Environment.prod : Environment.dev,
   );
 
-  await NotificationController.initializeLocalNotifications(debug: true);
-  await NotificationController.initializeRemoteNotifications(debug: true);
+  await NotificationController.initializeLocalNotifications(debug: kDebugMode);
+  await NotificationController.initializeRemoteNotifications(debug: kDebugMode);
   await NotificationController.getInitialNotificationAction();
 
   runApp(const AppWidget());

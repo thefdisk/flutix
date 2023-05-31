@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../application/auth/register_from/register_form_bloc.dart';
+import '../../../../application/auth/register_form/register_form_bloc.dart';
 import '../../../components/buttons/elevated_button.dart';
 import '../../../components/gen/assets.gen.dart';
 import '../../../components/gen/colors.gen.dart';
 import '../../../components/styles/typography.dart';
 import '../../../components/toast/app_toast.dart';
+import '../../../routes/app_router.dart';
 
 @RoutePage()
 class RegisterConfirmPage extends StatelessWidget {
@@ -29,7 +30,7 @@ class RegisterConfirmPage extends StatelessWidget {
 
             state.failureOrSuccessUpdateUser?.fold(
               (f) => AppToast(context).showAuthFailureToast(f),
-              (_) => print('success update user'),
+              (_) => context.router.replaceAll([const MainRoute()]),
             );
           },
         ),

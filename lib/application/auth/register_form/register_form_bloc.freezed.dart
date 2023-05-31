@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$RegisterFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -32,6 +33,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -46,6 +48,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -61,6 +64,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -76,6 +80,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -90,6 +95,7 @@ mixin _$RegisterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -121,6 +127,195 @@ class _$RegisterFormEventCopyWithImpl<$Res, $Val extends RegisterFormEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$_InitializedCopyWith<$Res> {
+  factory _$$_InitializedCopyWith(
+          _$_Initialized value, $Res Function(_$_Initialized) then) =
+      __$$_InitializedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Option<User> initialUser});
+}
+
+/// @nodoc
+class __$$_InitializedCopyWithImpl<$Res>
+    extends _$RegisterFormEventCopyWithImpl<$Res, _$_Initialized>
+    implements _$$_InitializedCopyWith<$Res> {
+  __$$_InitializedCopyWithImpl(
+      _$_Initialized _value, $Res Function(_$_Initialized) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? initialUser = null,
+  }) {
+    return _then(_$_Initialized(
+      null == initialUser
+          ? _value.initialUser
+          : initialUser // ignore: cast_nullable_to_non_nullable
+              as Option<User>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Initialized implements _Initialized {
+  const _$_Initialized(this.initialUser);
+
+  @override
+  final Option<User> initialUser;
+
+  @override
+  String toString() {
+    return 'RegisterFormEvent.initialized(initialUser: $initialUser)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Initialized &&
+            (identical(other.initialUser, initialUser) ||
+                other.initialUser == initialUser));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, initialUser);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InitializedCopyWith<_$_Initialized> get copyWith =>
+      __$$_InitializedCopyWithImpl<_$_Initialized>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
+    required TResult Function(File photoImage) photoProfileAdded,
+    required TResult Function() photoProfileDeleted,
+    required TResult Function(String fullname) fullNameChanged,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmPassword) confirmPasswordChanged,
+    required TResult Function() register,
+    required TResult Function(String genre) genreChanged,
+    required TResult Function(String language) languageChanged,
+    required TResult Function() userUpdated,
+  }) {
+    return initialized(initialUser);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
+    TResult? Function(File photoImage)? photoProfileAdded,
+    TResult? Function()? photoProfileDeleted,
+    TResult? Function(String fullname)? fullNameChanged,
+    TResult? Function(String email)? emailChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function(String confirmPassword)? confirmPasswordChanged,
+    TResult? Function()? register,
+    TResult? Function(String genre)? genreChanged,
+    TResult? Function(String language)? languageChanged,
+    TResult? Function()? userUpdated,
+  }) {
+    return initialized?.call(initialUser);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
+    TResult Function(File photoImage)? photoProfileAdded,
+    TResult Function()? photoProfileDeleted,
+    TResult Function(String fullname)? fullNameChanged,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmPassword)? confirmPasswordChanged,
+    TResult Function()? register,
+    TResult Function(String genre)? genreChanged,
+    TResult Function(String language)? languageChanged,
+    TResult Function()? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (initialized != null) {
+      return initialized(initialUser);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
+    required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_ConfirmPasswordChanged value)
+        confirmPasswordChanged,
+    required TResult Function(_Register value) register,
+    required TResult Function(_GenreChanged value) genreChanged,
+    required TResult Function(_languageChanged value) languageChanged,
+    required TResult Function(_UserUpdated value) userUpdated,
+  }) {
+    return initialized(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_EmailChanged value)? emailChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult? Function(_Register value)? register,
+    TResult? Function(_GenreChanged value)? genreChanged,
+    TResult? Function(_languageChanged value)? languageChanged,
+    TResult? Function(_UserUpdated value)? userUpdated,
+  }) {
+    return initialized?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
+    TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_ConfirmPasswordChanged value)? confirmPasswordChanged,
+    TResult Function(_Register value)? register,
+    TResult Function(_GenreChanged value)? genreChanged,
+    TResult Function(_languageChanged value)? languageChanged,
+    TResult Function(_UserUpdated value)? userUpdated,
+    required TResult orElse(),
+  }) {
+    if (initialized != null) {
+      return initialized(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initialized implements RegisterFormEvent {
+  const factory _Initialized(final Option<User> initialUser) = _$_Initialized;
+
+  Option<User> get initialUser;
+  @JsonKey(ignore: true)
+  _$$_InitializedCopyWith<_$_Initialized> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -189,6 +384,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -206,6 +402,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -223,6 +420,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -244,6 +442,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -262,6 +461,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -279,6 +479,7 @@ class _$_PhotoProfileAdded implements _PhotoProfileAdded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -346,6 +547,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -363,6 +565,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -380,6 +583,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -401,6 +605,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -419,6 +624,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -436,6 +642,7 @@ class _$_PhotoProfileDeleted implements _PhotoProfileDeleted {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -524,6 +731,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -541,6 +749,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -558,6 +767,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -579,6 +789,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -597,6 +808,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -614,6 +826,7 @@ class _$_FullNameChanged implements _FullNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -706,6 +919,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -723,6 +937,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -740,6 +955,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -761,6 +977,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -779,6 +996,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -796,6 +1014,7 @@ class _$_EmailChanged implements _EmailChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -889,6 +1108,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -906,6 +1126,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -923,6 +1144,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -944,6 +1166,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -962,6 +1185,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -979,6 +1203,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -1073,6 +1298,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -1090,6 +1316,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -1107,6 +1334,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -1128,6 +1356,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -1146,6 +1375,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -1163,6 +1393,7 @@ class _$_ConfirmPasswordChanged implements _ConfirmPasswordChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -1230,6 +1461,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -1247,6 +1479,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -1264,6 +1497,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -1285,6 +1519,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -1303,6 +1538,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -1320,6 +1556,7 @@ class _$_Register implements _Register {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -1407,6 +1644,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -1424,6 +1662,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -1441,6 +1680,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -1462,6 +1702,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -1480,6 +1721,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -1497,6 +1739,7 @@ class _$_GenreChanged implements _GenreChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -1590,6 +1833,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -1607,6 +1851,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -1624,6 +1869,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -1645,6 +1891,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -1663,6 +1910,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -1680,6 +1928,7 @@ class _$_languageChanged implements _languageChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -1746,6 +1995,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(Option<User> initialUser) initialized,
     required TResult Function(File photoImage) photoProfileAdded,
     required TResult Function() photoProfileDeleted,
     required TResult Function(String fullname) fullNameChanged,
@@ -1763,6 +2013,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<User> initialUser)? initialized,
     TResult? Function(File photoImage)? photoProfileAdded,
     TResult? Function()? photoProfileDeleted,
     TResult? Function(String fullname)? fullNameChanged,
@@ -1780,6 +2031,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<User> initialUser)? initialized,
     TResult Function(File photoImage)? photoProfileAdded,
     TResult Function()? photoProfileDeleted,
     TResult Function(String fullname)? fullNameChanged,
@@ -1801,6 +2053,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_PhotoProfileAdded value) photoProfileAdded,
     required TResult Function(_PhotoProfileDeleted value) photoProfileDeleted,
     required TResult Function(_FullNameChanged value) fullNameChanged,
@@ -1819,6 +2072,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult? Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
@@ -1836,6 +2090,7 @@ class _$_UserUpdated implements _UserUpdated {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_PhotoProfileAdded value)? photoProfileAdded,
     TResult Function(_PhotoProfileDeleted value)? photoProfileDeleted,
     TResult Function(_FullNameChanged value)? fullNameChanged,
@@ -1862,7 +2117,6 @@ abstract class _UserUpdated implements RegisterFormEvent {
 /// @nodoc
 mixin _$RegisterFormState {
   Register get register => throw _privateConstructorUsedError;
-  User get user => throw _privateConstructorUsedError;
   Either<AuthFailure, User>? get failureOrSuccessRegister =>
       throw _privateConstructorUsedError;
   Either<AuthFailure, String>? get failureOrSuccessUploadPhotoProfile =>
@@ -1886,7 +2140,6 @@ abstract class $RegisterFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {Register register,
-      User user,
       Either<AuthFailure, User>? failureOrSuccessRegister,
       Either<AuthFailure, String>? failureOrSuccessUploadPhotoProfile,
       Either<AuthFailure, Unit>? failureOrSuccessUpdateUser,
@@ -1895,7 +2148,6 @@ abstract class $RegisterFormStateCopyWith<$Res> {
       bool isUpdatingUser});
 
   $RegisterCopyWith<$Res> get register;
-  $UserCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -1912,7 +2164,6 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
   @override
   $Res call({
     Object? register = null,
-    Object? user = null,
     Object? failureOrSuccessRegister = freezed,
     Object? failureOrSuccessUploadPhotoProfile = freezed,
     Object? failureOrSuccessUpdateUser = freezed,
@@ -1925,10 +2176,6 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
           ? _value.register
           : register // ignore: cast_nullable_to_non_nullable
               as Register,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as User,
       failureOrSuccessRegister: freezed == failureOrSuccessRegister
           ? _value.failureOrSuccessRegister
           : failureOrSuccessRegister // ignore: cast_nullable_to_non_nullable
@@ -1964,14 +2211,6 @@ class _$RegisterFormStateCopyWithImpl<$Res, $Val extends RegisterFormState>
       return _then(_value.copyWith(register: value) as $Val);
     });
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserCopyWith<$Res> get user {
-    return $UserCopyWith<$Res>(_value.user, (value) {
-      return _then(_value.copyWith(user: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -1984,7 +2223,6 @@ abstract class _$$_RegisterFormStateCopyWith<$Res>
   @useResult
   $Res call(
       {Register register,
-      User user,
       Either<AuthFailure, User>? failureOrSuccessRegister,
       Either<AuthFailure, String>? failureOrSuccessUploadPhotoProfile,
       Either<AuthFailure, Unit>? failureOrSuccessUpdateUser,
@@ -1994,8 +2232,6 @@ abstract class _$$_RegisterFormStateCopyWith<$Res>
 
   @override
   $RegisterCopyWith<$Res> get register;
-  @override
-  $UserCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -2010,7 +2246,6 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? register = null,
-    Object? user = null,
     Object? failureOrSuccessRegister = freezed,
     Object? failureOrSuccessUploadPhotoProfile = freezed,
     Object? failureOrSuccessUpdateUser = freezed,
@@ -2023,10 +2258,6 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
           ? _value.register
           : register // ignore: cast_nullable_to_non_nullable
               as Register,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as User,
       failureOrSuccessRegister: freezed == failureOrSuccessRegister
           ? _value.failureOrSuccessRegister
           : failureOrSuccessRegister // ignore: cast_nullable_to_non_nullable
@@ -2061,7 +2292,6 @@ class __$$_RegisterFormStateCopyWithImpl<$Res>
 class _$_RegisterFormState extends _RegisterFormState {
   const _$_RegisterFormState(
       {required this.register,
-      required this.user,
       required this.failureOrSuccessRegister,
       required this.failureOrSuccessUploadPhotoProfile,
       required this.failureOrSuccessUpdateUser,
@@ -2072,8 +2302,6 @@ class _$_RegisterFormState extends _RegisterFormState {
 
   @override
   final Register register;
-  @override
-  final User user;
   @override
   final Either<AuthFailure, User>? failureOrSuccessRegister;
   @override
@@ -2092,7 +2320,7 @@ class _$_RegisterFormState extends _RegisterFormState {
 
   @override
   String toString() {
-    return 'RegisterFormState(register: $register, user: $user, failureOrSuccessRegister: $failureOrSuccessRegister, failureOrSuccessUploadPhotoProfile: $failureOrSuccessUploadPhotoProfile, failureOrSuccessUpdateUser: $failureOrSuccessUpdateUser, showErrorMessages: $showErrorMessages, isRegistering: $isRegistering, isUpdatingUser: $isUpdatingUser)';
+    return 'RegisterFormState(register: $register, failureOrSuccessRegister: $failureOrSuccessRegister, failureOrSuccessUploadPhotoProfile: $failureOrSuccessUploadPhotoProfile, failureOrSuccessUpdateUser: $failureOrSuccessUpdateUser, showErrorMessages: $showErrorMessages, isRegistering: $isRegistering, isUpdatingUser: $isUpdatingUser)';
   }
 
   @override
@@ -2102,7 +2330,6 @@ class _$_RegisterFormState extends _RegisterFormState {
             other is _$_RegisterFormState &&
             (identical(other.register, register) ||
                 other.register == register) &&
-            (identical(other.user, user) || other.user == user) &&
             (identical(
                     other.failureOrSuccessRegister, failureOrSuccessRegister) ||
                 other.failureOrSuccessRegister == failureOrSuccessRegister) &&
@@ -2126,7 +2353,6 @@ class _$_RegisterFormState extends _RegisterFormState {
   int get hashCode => Object.hash(
       runtimeType,
       register,
-      user,
       failureOrSuccessRegister,
       failureOrSuccessUploadPhotoProfile,
       failureOrSuccessUpdateUser,
@@ -2145,7 +2371,6 @@ class _$_RegisterFormState extends _RegisterFormState {
 abstract class _RegisterFormState extends RegisterFormState {
   const factory _RegisterFormState(
       {required final Register register,
-      required final User user,
       required final Either<AuthFailure, User>? failureOrSuccessRegister,
       required final Either<AuthFailure, String>?
           failureOrSuccessUploadPhotoProfile,
@@ -2157,8 +2382,6 @@ abstract class _RegisterFormState extends RegisterFormState {
 
   @override
   Register get register;
-  @override
-  User get user;
   @override
   Either<AuthFailure, User>? get failureOrSuccessRegister;
   @override

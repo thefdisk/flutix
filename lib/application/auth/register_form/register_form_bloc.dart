@@ -29,6 +29,16 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
     Emitter<RegisterFormState> emit,
   ) {
     return event.map(
+      initialized: (e) async {
+        emit(
+          e.initialUser.fold(
+            () => state,
+            (user) => state.copyWith(
+              register: Register.fromUser(user),
+            ),
+          ),
+        );
+      },
       photoProfileAdded: (e) async {
         if (state.register.photoImage == null) {
           emit(

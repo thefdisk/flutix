@@ -2,6 +2,8 @@ part of 'register_form_bloc.dart';
 
 @freezed
 class RegisterFormEvent with _$RegisterFormEvent {
+  const factory RegisterFormEvent.initialized(Option<User> initialUser) =
+      _Initialized;
   const factory RegisterFormEvent.photoProfileAdded(File photoImage) =
       _PhotoProfileAdded;
   const factory RegisterFormEvent.photoProfileDeleted() = _PhotoProfileDeleted;

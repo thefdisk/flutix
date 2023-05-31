@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../application/auth/register_from/register_form_bloc.dart';
+import '../../../../application/auth/register_form/register_form_bloc.dart';
 import '../../../components/fields/app_text_form_field.dart';
 
 class RegisterField extends StatelessWidget {

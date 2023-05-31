@@ -17,15 +17,32 @@ class AuthRepository implements IAuthRepository {
 
   @override
   Stream<User> getAuthState() {
-    throw UnimplementedError();
+    return _firebaseAuthDataProvider.userAuth.map((userDto) {
+      return userDto == UserDto.empty() ? User.empty() : userDto.toDomain();
+    });
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword({
+  Future<Either<AuthFailure, User>> signInWithEmailAndPassword({
     required String email,
     required String password,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    try {
+      final result = await _firebaseAuthDataProvider.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      if (result.hasError) {
+        return left(result.error!);
+      }
+
+      final user = result.data!.toDomain();
+
+      return right(user);
+    } catch (e) {
+      return left(const AuthFailure.unexpectedError());
+    }
   }
 
   @override
@@ -52,8 +69,20 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<Either<AuthFailure, User>> getDetailUser() {
-    throw UnimplementedError();
+  Future<Either<AuthFailure, User>> getDetailUser({required String uid}) async {
+    try {
+      final result = await _firebaseAuthDataProvider.fetchDetailUser(uid: uid);
+
+      if (result.hasError) {
+        return left(result.error!);
+      }
+
+      final user = result.data!.toDomain();
+
+      return right(user);
+    } catch (e) {
+      return left(const AuthFailure.unexpectedError());
+    }
   }
 
   @override
@@ -93,6 +122,21 @@ class AuthRepository implements IAuthRepository {
       final photoProfileUrl = result.data!;
 
       return right(photoProfileUrl);
+    } catch (e) {
+      return left(const AuthFailure.unexpectedError());
+    }
+  }
+
+  @override
+  Future<Either<AuthFailure, Unit>> signOut() async {
+    try {
+      final result = await _firebaseAuthDataProvider.signOut();
+
+      if (result.hasError) {
+        return left(result.error!);
+      }
+
+      return right(unit);
     } catch (e) {
       return left(const AuthFailure.unexpectedError());
     }

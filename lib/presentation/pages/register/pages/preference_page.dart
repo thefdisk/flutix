@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../application/auth/register_from/register_form_bloc.dart';
+import '../../../../application/auth/register_form/register_form_bloc.dart';
 import '../../../components/buttons/box_button.dart';
 import '../../../components/gen/colors.gen.dart';
 import '../../../components/styles/typography.dart';

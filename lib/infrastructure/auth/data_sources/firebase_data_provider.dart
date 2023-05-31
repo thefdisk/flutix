@@ -18,6 +18,38 @@ class FirebaseAuthDataProvider {
 
   FirebaseAuthDataProvider(this._firebaseAuth, this._db, this._storage);
 
+  Stream<UserDto> get userAuth {
+    return _firebaseAuth.authStateChanges().map((firebaseUser) {
+      final userDto = firebaseUser == null
+          ? UserDto.empty()
+          : UserDto.fromFirebaseUser(firebaseUser);
+
+      return userDto;
+    });
+  }
+
+  Future<DC<AuthFailure, UserDto>> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final firebaseUserCredential =
+          await _firebaseAuth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      return DC.data(UserDto.fromFirebaseCredential(firebaseUserCredential));
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found' || e.code == 'wrong-password') {
+        return DC.error(const AuthFailure.userNotFound());
+      }
+      return DC.error(AuthFailure.dynamicErrorMessage(e.code));
+    } catch (e) {
+      return DC.error(AuthFailure.dynamicErrorMessage(e.toString()));
+    }
+  }
+
   Future<DC<AuthFailure, UserDto>> signUpWithEmailAndPassword({
     required String email,
     required String password,
@@ -34,9 +66,39 @@ class FirebaseAuthDataProvider {
       if (e.code == 'email-already-in-use') {
         return DC.error(const AuthFailure.emailAlreadyInUse());
       }
-      return DC.error(AuthFailure.dynamicErrorMessage(e.code.toString()));
+      return DC.error(AuthFailure.dynamicErrorMessage(e.code));
     } catch (e) {
       return DC.error(AuthFailure.dynamicErrorMessage(e.toString()));
+    }
+  }
+
+  Future<DC<AuthFailure, Unit>> signOut() async {
+    try {
+      await _firebaseAuth.signOut();
+
+      return DC.data(unit);
+    } on FirebaseException catch (e) {
+      return DC.error(AuthFailure.dynamicErrorMessage(e.code));
+    }
+  }
+
+  Future<DC<AuthFailure, UserDto>> fetchDetailUser({
+    required String uid,
+  }) async {
+    try {
+      final docSnapshot = await _db.collection('users').doc(uid).get();
+
+      if (!docSnapshot.exists) {
+        return DC.error(const AuthFailure.userNotFound());
+      }
+
+      final userData = docSnapshot.data() as Map<String, dynamic>;
+
+      final userDto = UserDto.fromJson(userData);
+
+      return DC.data(userDto);
+    } on FirebaseException catch (e) {
+      return DC.error(AuthFailure.dynamicErrorMessage(e.code));
     }
   }
 
@@ -48,7 +110,7 @@ class FirebaseAuthDataProvider {
 
       return DC.data(unit);
     } on FirebaseException catch (e) {
-      return DC.error(AuthFailure.dynamicErrorMessage(e.code.toString()));
+      return DC.error(AuthFailure.dynamicErrorMessage(e.code));
     }
   }
 
@@ -63,7 +125,7 @@ class FirebaseAuthDataProvider {
 
       return DC.data(photoProfileUrl);
     } on FirebaseException catch (e) {
-      return DC.error(AuthFailure.dynamicErrorMessage(e.code.toString()));
+      return DC.error(AuthFailure.dynamicErrorMessage(e.code));
     }
   }
 }

@@ -1,14 +1,18 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../application/auth/register_from/register_form_bloc.dart';
+import '../../../application/auth/register_form/register_form_bloc.dart';
+import '../../../domain/auth/user.dart';
 import '../../../injection.dart';
 import '../../routes/app_router.dart';
 
 @RoutePage()
 class RegisterPage extends StatelessWidget implements AutoRouteWrapper {
-  const RegisterPage({super.key});
+  const RegisterPage({super.key, this.initialUser});
+
+  final User? initialUser;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +46,12 @@ class RegisterPage extends StatelessWidget implements AutoRouteWrapper {
 
   @override
   Widget wrappedRoute(BuildContext context) => BlocProvider(
-        create: (_) => getIt<RegisterFormBloc>(),
+        create: (_) => getIt<RegisterFormBloc>()
+          ..add(
+            RegisterFormEvent.initialized(
+              optionOf(initialUser),
+            ),
+          ),
         child: this,
       );
 }

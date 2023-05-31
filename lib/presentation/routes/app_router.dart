@@ -1,6 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
+import '../../domain/auth/user.dart';
 import '../pages/login/login_page.dart';
+import '../pages/main/main_page.dart';
 import '../pages/register/pages/confirm_page.dart';
 import '../pages/register/pages/input_page.dart';
 import '../pages/register/pages/preference_page.dart';
@@ -29,5 +32,8 @@ class AppRouter extends _$AppRouter {
 
         /// Login
         AutoRoute(page: LoginRoute.page),
+
+        /// Main
+        AutoRoute(page: MainRoute.page),
       ];
 }
