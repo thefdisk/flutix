@@ -11,30 +11,35 @@ part 'register.freezed.dart';
 @freezed
 class Register with _$Register {
   const Register._();
+
   const factory Register({
+    required String uid,
     required StringSingleLine name,
     required Email email,
     required Password password,
     required ConfirmPassword confirmPassword,
-    File? profilePicture,
+    File? photoImage,
+    required String photoUrl,
     required List<String> selectedGenres,
     required String selectedLanguage,
   }) = _Register;
 
   factory Register.empty() => Register(
+        uid: '',
         name: StringSingleLine(''),
         email: Email(''),
         password: Password(''),
         confirmPassword: ConfirmPassword('', ''),
+        photoUrl: '',
         selectedGenres: [],
         selectedLanguage: 'English',
       );
 
   User toUserDomain() => User(
-        id: '',
+        uid: uid,
         email: email.getOrCrash(),
         name: name.getOrCrash(),
-        profilePicture: '',
+        photoUrl: photoUrl,
         selectedGenres: selectedGenres,
         selectedLanguage: selectedLanguage,
         balance: 0,

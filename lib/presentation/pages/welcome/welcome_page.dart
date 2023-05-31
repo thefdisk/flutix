@@ -61,7 +61,8 @@ class WelcomePage extends StatelessWidget {
                     style: AppTypography(context)
                         .body1
                         .copyWith(color: ColorName.mainColor),
-                    recognizer: TapGestureRecognizer()..onTap = () {},
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () => context.pushRoute(const LoginRoute()),
                   ),
                 ],
               ),

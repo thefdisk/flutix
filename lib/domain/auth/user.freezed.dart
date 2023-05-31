@@ -16,10 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$User {
-  String get id => throw _privateConstructorUsedError;
+  String get uid => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get profilePicture => throw _privateConstructorUsedError;
+  String get photoUrl => throw _privateConstructorUsedError;
   List<String> get selectedGenres => throw _privateConstructorUsedError;
   String get selectedLanguage => throw _privateConstructorUsedError;
   int get balance => throw _privateConstructorUsedError;
@@ -34,10 +34,10 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
-      {String id,
+      {String uid,
       String email,
       String name,
-      String profilePicture,
+      String photoUrl,
       List<String> selectedGenres,
       String selectedLanguage,
       int balance});
@@ -56,18 +56,18 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? uid = null,
     Object? email = null,
     Object? name = null,
-    Object? profilePicture = null,
+    Object? photoUrl = null,
     Object? selectedGenres = null,
     Object? selectedLanguage = null,
     Object? balance = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      uid: null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
               as String,
       email: null == email
           ? _value.email
@@ -77,9 +77,9 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      profilePicture: null == profilePicture
-          ? _value.profilePicture
-          : profilePicture // ignore: cast_nullable_to_non_nullable
+      photoUrl: null == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
               as String,
       selectedGenres: null == selectedGenres
           ? _value.selectedGenres
@@ -104,10 +104,10 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String id,
+      {String uid,
       String email,
       String name,
-      String profilePicture,
+      String photoUrl,
       List<String> selectedGenres,
       String selectedLanguage,
       int balance});
@@ -122,18 +122,18 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? uid = null,
     Object? email = null,
     Object? name = null,
-    Object? profilePicture = null,
+    Object? photoUrl = null,
     Object? selectedGenres = null,
     Object? selectedLanguage = null,
     Object? balance = null,
   }) {
     return _then(_$_User(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      uid: null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
               as String,
       email: null == email
           ? _value.email
@@ -143,9 +143,9 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      profilePicture: null == profilePicture
-          ? _value.profilePicture
-          : profilePicture // ignore: cast_nullable_to_non_nullable
+      photoUrl: null == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
               as String,
       selectedGenres: null == selectedGenres
           ? _value._selectedGenres
@@ -167,10 +167,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 
 class _$_User extends _User {
   const _$_User(
-      {required this.id,
+      {required this.uid,
       required this.email,
       required this.name,
-      required this.profilePicture,
+      required this.photoUrl,
       required final List<String> selectedGenres,
       required this.selectedLanguage,
       required this.balance})
@@ -178,13 +178,13 @@ class _$_User extends _User {
         super._();
 
   @override
-  final String id;
+  final String uid;
   @override
   final String email;
   @override
   final String name;
   @override
-  final String profilePicture;
+  final String photoUrl;
   final List<String> _selectedGenres;
   @override
   List<String> get selectedGenres {
@@ -200,7 +200,7 @@ class _$_User extends _User {
 
   @override
   String toString() {
-    return 'User(id: $id, email: $email, name: $name, profilePicture: $profilePicture, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage, balance: $balance)';
+    return 'User(uid: $uid, email: $email, name: $name, photoUrl: $photoUrl, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage, balance: $balance)';
   }
 
   @override
@@ -208,11 +208,11 @@ class _$_User extends _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_User &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.profilePicture, profilePicture) ||
-                other.profilePicture == profilePicture) &&
+            (identical(other.photoUrl, photoUrl) ||
+                other.photoUrl == photoUrl) &&
             const DeepCollectionEquality()
                 .equals(other._selectedGenres, _selectedGenres) &&
             (identical(other.selectedLanguage, selectedLanguage) ||
@@ -223,10 +223,10 @@ class _$_User extends _User {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      uid,
       email,
       name,
-      profilePicture,
+      photoUrl,
       const DeepCollectionEquality().hash(_selectedGenres),
       selectedLanguage,
       balance);
@@ -240,23 +240,23 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   const factory _User(
-      {required final String id,
+      {required final String uid,
       required final String email,
       required final String name,
-      required final String profilePicture,
+      required final String photoUrl,
       required final List<String> selectedGenres,
       required final String selectedLanguage,
       required final int balance}) = _$_User;
   const _User._() : super._();
 
   @override
-  String get id;
+  String get uid;
   @override
   String get email;
   @override
   String get name;
   @override
-  String get profilePicture;
+  String get photoUrl;
   @override
   List<String> get selectedGenres;
   @override

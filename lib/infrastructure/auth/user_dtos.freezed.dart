@@ -14,16 +14,21 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+UserDto _$UserDtoFromJson(Map<String, dynamic> json) {
+  return _UserDto.fromJson(json);
+}
+
 /// @nodoc
 mixin _$UserDto {
   String get uid => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get profilePicture => throw _privateConstructorUsedError;
+  String get photoUrl => throw _privateConstructorUsedError;
   List<String> get selectedGenres => throw _privateConstructorUsedError;
   String get selectedLanguage => throw _privateConstructorUsedError;
   int get balance => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UserDtoCopyWith<UserDto> get copyWith => throw _privateConstructorUsedError;
 }
@@ -37,7 +42,7 @@ abstract class $UserDtoCopyWith<$Res> {
       {String uid,
       String email,
       String name,
-      String profilePicture,
+      String photoUrl,
       List<String> selectedGenres,
       String selectedLanguage,
       int balance});
@@ -59,7 +64,7 @@ class _$UserDtoCopyWithImpl<$Res, $Val extends UserDto>
     Object? uid = null,
     Object? email = null,
     Object? name = null,
-    Object? profilePicture = null,
+    Object? photoUrl = null,
     Object? selectedGenres = null,
     Object? selectedLanguage = null,
     Object? balance = null,
@@ -77,9 +82,9 @@ class _$UserDtoCopyWithImpl<$Res, $Val extends UserDto>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      profilePicture: null == profilePicture
-          ? _value.profilePicture
-          : profilePicture // ignore: cast_nullable_to_non_nullable
+      photoUrl: null == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
               as String,
       selectedGenres: null == selectedGenres
           ? _value.selectedGenres
@@ -108,7 +113,7 @@ abstract class _$$_UserDtoCopyWith<$Res> implements $UserDtoCopyWith<$Res> {
       {String uid,
       String email,
       String name,
-      String profilePicture,
+      String photoUrl,
       List<String> selectedGenres,
       String selectedLanguage,
       int balance});
@@ -127,7 +132,7 @@ class __$$_UserDtoCopyWithImpl<$Res>
     Object? uid = null,
     Object? email = null,
     Object? name = null,
-    Object? profilePicture = null,
+    Object? photoUrl = null,
     Object? selectedGenres = null,
     Object? selectedLanguage = null,
     Object? balance = null,
@@ -145,9 +150,9 @@ class __$$_UserDtoCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      profilePicture: null == profilePicture
-          ? _value.profilePicture
-          : profilePicture // ignore: cast_nullable_to_non_nullable
+      photoUrl: null == photoUrl
+          ? _value.photoUrl
+          : photoUrl // ignore: cast_nullable_to_non_nullable
               as String,
       selectedGenres: null == selectedGenres
           ? _value._selectedGenres
@@ -166,17 +171,21 @@ class __$$_UserDtoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-class _$_UserDto implements _UserDto {
+@JsonSerializable()
+class _$_UserDto extends _UserDto {
   const _$_UserDto(
       {required this.uid,
       required this.email,
       required this.name,
-      required this.profilePicture,
+      required this.photoUrl,
       required final List<String> selectedGenres,
       required this.selectedLanguage,
       required this.balance})
-      : _selectedGenres = selectedGenres;
+      : _selectedGenres = selectedGenres,
+        super._();
+
+  factory _$_UserDto.fromJson(Map<String, dynamic> json) =>
+      _$$_UserDtoFromJson(json);
 
   @override
   final String uid;
@@ -185,7 +194,7 @@ class _$_UserDto implements _UserDto {
   @override
   final String name;
   @override
-  final String profilePicture;
+  final String photoUrl;
   final List<String> _selectedGenres;
   @override
   List<String> get selectedGenres {
@@ -201,7 +210,7 @@ class _$_UserDto implements _UserDto {
 
   @override
   String toString() {
-    return 'UserDto(uid: $uid, email: $email, name: $name, profilePicture: $profilePicture, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage, balance: $balance)';
+    return 'UserDto(uid: $uid, email: $email, name: $name, photoUrl: $photoUrl, selectedGenres: $selectedGenres, selectedLanguage: $selectedLanguage, balance: $balance)';
   }
 
   @override
@@ -212,8 +221,8 @@ class _$_UserDto implements _UserDto {
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.profilePicture, profilePicture) ||
-                other.profilePicture == profilePicture) &&
+            (identical(other.photoUrl, photoUrl) ||
+                other.photoUrl == photoUrl) &&
             const DeepCollectionEquality()
                 .equals(other._selectedGenres, _selectedGenres) &&
             (identical(other.selectedLanguage, selectedLanguage) ||
@@ -221,13 +230,14 @@ class _$_UserDto implements _UserDto {
             (identical(other.balance, balance) || other.balance == balance));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       uid,
       email,
       name,
-      profilePicture,
+      photoUrl,
       const DeepCollectionEquality().hash(_selectedGenres),
       selectedLanguage,
       balance);
@@ -237,17 +247,27 @@ class _$_UserDto implements _UserDto {
   @pragma('vm:prefer-inline')
   _$$_UserDtoCopyWith<_$_UserDto> get copyWith =>
       __$$_UserDtoCopyWithImpl<_$_UserDto>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_UserDtoToJson(
+      this,
+    );
+  }
 }
 
-abstract class _UserDto implements UserDto {
+abstract class _UserDto extends UserDto {
   const factory _UserDto(
       {required final String uid,
       required final String email,
       required final String name,
-      required final String profilePicture,
+      required final String photoUrl,
       required final List<String> selectedGenres,
       required final String selectedLanguage,
       required final int balance}) = _$_UserDto;
+  const _UserDto._() : super._();
+
+  factory _UserDto.fromJson(Map<String, dynamic> json) = _$_UserDto.fromJson;
 
   @override
   String get uid;
@@ -256,7 +276,7 @@ abstract class _UserDto implements UserDto {
   @override
   String get name;
   @override
-  String get profilePicture;
+  String get photoUrl;
   @override
   List<String> get selectedGenres;
   @override

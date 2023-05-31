@@ -30,22 +30,22 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
   ) {
     return event.map(
       photoProfileAdded: (e) async {
-        if (state.register.profilePicture == null) {
+        if (state.register.photoImage == null) {
           emit(
             state.copyWith(
               register: state.register.copyWith(
-                profilePicture: e.photoProfile,
+                photoImage: e.photoImage,
               ),
             ),
           );
         }
       },
       photoProfileDeleted: (e) async {
-        if (state.register.profilePicture != null) {
+        if (state.register.photoImage != null) {
           emit(
             state.copyWith(
               register: state.register.copyWith(
-                profilePicture: null,
+                photoImage: null,
               ),
             ),
           );
@@ -95,7 +95,7 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
           state.copyWith(
             showErrorMessages: true,
             isRegistering: true,
-            failureOrSuccessRegisterOption: none(),
+            failureOrSuccessRegister: null,
           ),
         );
 
@@ -114,10 +114,20 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
             password: state.register.password.getOrElse(''),
           );
 
+          if (failureOrSuccess.isRight()) {
+            emit(
+              state.copyWith(
+                register: state.register.copyWith(
+                  uid: failureOrSuccess.getOrElse(() => User.empty()).uid,
+                ),
+              ),
+            );
+          }
+
           emit(
             state.copyWith(
               isRegistering: false,
-              failureOrSuccessRegisterOption: optionOf(failureOrSuccess),
+              failureOrSuccessRegister: failureOrSuccess,
             ),
           );
         }
@@ -151,31 +161,48 @@ class RegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
         );
       },
       userUpdated: (e) async {
-        // emit(
-        //   state.copyWith(
-        //     isSubmitting: true,
-        //     failureOrSuccessRegisterOption: none(),
-        //   ),
-        // );
+        emit(
+          state.copyWith(
+            isUpdatingUser: true,
+            failureOrSuccessUpdateUser: null,
+          ),
+        );
 
-        // final failureOrSuccess =
-        //     await _authRepository.signUpWithEmailAndPassword(
-        //   email: state.register.email.getOrCrash(),
-        //   password: state.register.password.getOrCrash(),
-        // );
+        if (state.register.photoImage != null) {
+          final failureOrSuccess = await _authRepository.uploadPhotoProfile(
+            user: state.register.toUserDomain(),
+            photoImage: state.register.photoImage!,
+          );
 
-        // if (failureOrSuccess.isLeft()) {
-        //   emit(
-        //     state.copyWith(
-        //       isSubmitting: false,
-        //       // failureOrSuccessOption: optionOf(failureOrSuccess),
-        //     ),
-        //   );
-        // }
+          if (failureOrSuccess.isLeft()) {
+            emit(
+              state.copyWith(
+                isUpdatingUser: false,
+                failureOrSuccessUploadPhotoProfile: failureOrSuccess,
+              ),
+            );
+            return;
+          } else {
+            emit(
+              state.copyWith(
+                register: state.register.copyWith(
+                  photoUrl: failureOrSuccess.getOrElse(() => ''),
+                ),
+              ),
+            );
+          }
+        }
 
-        // if (failureOrSuccess.isRight()) {
-        //   await _authRepository.updateUser();
-        // }
+        final failureOrSuccess = await _authRepository.updateUser(
+          user: state.register.toUserDomain(),
+        );
+
+        emit(
+          state.copyWith(
+            isUpdatingUser: false,
+            failureOrSuccessUpdateUser: failureOrSuccess,
+          ),
+        );
       },
     );
   }
